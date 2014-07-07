@@ -24,7 +24,7 @@ The theme colors can be customized easily by editing the code in the "Theme colo
 
 **Warning:** A fail-safe has not yet been implemented, so it is imperative not to delete any values here (instead, change them!).
 
-***HEADER IMAGE***
+### HEADER IMAGE
 
 **Description:** Changes the header image.
 
@@ -38,7 +38,7 @@ The theme colors can be customized easily by editing the code in the "Theme colo
 
 To change the header image, edit the URL location of `url(http://i.imgur.com/IVAIgeY.png)` to the desired image's location. Delete `fixed` if it is undesirable for the image to remain static while scrolling.
 
-***BACKGROUND COLORS***
+### BACKGROUND COLORS
 
 **Description:** Changes the main background colors.
 
@@ -57,7 +57,7 @@ To change the header image, edit the URL location of `url(http://i.imgur.com/IVA
 
 To change the background colors, edit the values for each `background-color:`identifier. The 'Outer' determines the color of the entire page's background. The 'Boxes' determines the color of the post boxes, comments, sidebar and header bar.
 
-***NOTIFICATION/INFORMATION BOX COLOR***
+### NOTIFICATION/INFORMATION BOX COLOR
 
 **Description:** Changes the color of table headers.
 
@@ -73,7 +73,7 @@ To change the background colors, edit the values for each `background-color:`ide
 
 Tables are not common but they exist. To change the background color of the header cells, edit the values for the `background-color:` identifier.
 
-***LINK COLORS***
+### LINK COLORS
 
 **Description:** Changes the color of most hyperlinks.
 
@@ -90,7 +90,7 @@ Tables are not common but they exist. To change the background color of the head
 
 To change the color of most hyperlinks, edit the values for the `color:` identifiers.
 
-***BUTTON COLORS***
+### BUTTON COLORS
 
 **Description:** Changes the color of buttons.
 
