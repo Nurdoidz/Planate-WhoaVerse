@@ -1,75 +1,70 @@
 /*
-    Theme colors
-    ------------
-                  */
+            --------------------------------------------------------------------
+            
+            Planate theme stylesheet for WhoaVerse subverses
+            By Nurdoidz
+            Version 1.0 (Last modified: 2014-07-07)
+            For more information, go to http://whoaverse.com/v/Planate.
+            
+            For custom styling documentation, visit
+            https://github.com/Nurdoidz/Planate-WhoaVerse
+            
+            -------------------------------------------------------------------- */
 
-    /* Background */
+
+
+/*  Theme colors and customization
+    ============================================================================ */
+
+    /* Header image */
+    
+        #header {background: url(http://i.imgur.com/IVAIgeY.png) no-repeat fixed 50% 0;}
+    
+    
+    /* Background colors ----------------------------------- */
 
         /* Outer (darker) */
-        body,#sr-header-area,.tabmenu li.selected,#header-bottom-right {
-            background-color: #EEE;
-        }
+        body,#sr-header-area,#header-bottom-right 
+            {background-color: #EEE;}
         
         /* Boxes (lighter) */
-        .side,.link,.commentarea .sitetable,.comment .expand:hover {
-            background-color: #FFF;
-        }
+        .side,.link,.commentarea .sitetable,.comment .expand:hover,.tabmenu,.well,#header:after 
+            {background-color: #FFF;}
 
 
-    /* Notification/information box */
+    /* Notification/information box color ------------------ */
 
-        .alert-info,.info th {
+        .alert-info,.info th,thead>tr>td.info,.table>tbody>tr>td.info,.table>tfoot>tr>td.info,.table>thead>tr>th.info,.table>tbody>tr>th.info,.table>tfoot>tr>th.info,.table>thead>tr.info>td,.table>tbody>tr.info>td,.table>tfoot>tr.info>td,.table>thead>tr.info>th,.table>tbody>tr.info>th,.table>tfoot>tr.info>th {
             background-color: #48E;
             border: 0;
             border-radius: 0;
         }
 
 
-    /* Links */
+    /* Link colors ----------------------------------------- */
 
-        a,.link a,.link .title.may-blank,.link .title .domain a:hover,.sidecontentbox .content a:hover,.footer:before,.comment .expand:hover,#sr-header-area a:hover {
-            color: #48E;
-        }
+        .link a,a,.link .title.may-blank,.link .title .domain a:hover,.sidecontentbox .content a:hover,.footer:before,.comment .expand:hover,#sr-header-area a:hover,.pagename a:hover,#header-bottom-right a:hover
+            {color: #48E;}
+            
             /* On-hover */
-            a:hover,.link a:hover,.link .title.may-blank:hover {
-                color: #59F;
-            }
+            a:hover,.link a:hover,.link .title.may-blank:hover 
+                {color: #59F;}
 
 
-    /* Buttons */
+    /* Button colors --------------------------------------- */
 
-        .btn-default,.btn-whoaverse,.btn-whoaverse-default,.btn-whoaverse-medium,.btn-whoaverse-paging {
+        .btn-default,.btn-whoaverse,.btn-whoaverse-default,.btn-whoaverse-medium,.btn-whoaverse-paging,.titlebox h5 a {
             color: #FFF !important;
             background-color: #48E;
-            border-radius: 0;
-            border: 0;
-            text-shadow: none;
-            font-weight: normal;
-            -moz-box-shadow: inset -2px -2px 0 #25B;
-            -webkit-box-shadow: inset -2px -2px 0 #25B;
-            box-shadow: inset -2px -2px 0 #25B;
         }
             /* On-hover */
-            .btn-default:hover,.btn-whoaverse:hover,.btn-whoaverse-default:hover,.btn-whoaverse-medium:hover,.btn-whoaverse-paging:hover {
-                background-color: #59F;
-                color: #FFF
-            }
-
-
-    /* Shadows */
-
-        .side,.link,.commentarea .sitetable {
-            -moz-box-shadow: 3px 3px 0 #DDD;
-            -webkit-box-shadow: 3px 3px 0 #DDD;
-            box-shadow: 3px 3px 0 #DDD;
-        }
+            .btn-default:hover,.btn-whoaverse:hover,.btn-whoaverse-default:hover,.btn-whoaverse-medium:hover,.btn-whoaverse-paging:hover,.titlebox h5 a:hover
+                {background-color: #59F;}
 
 
 
-/* 
-    Body
-    ----    
-          */
+/*  Body
+    ============================================================================ */
 
     body {
         font-family: Arial, sans-serif;
@@ -77,7 +72,7 @@
     }
 
 
-    /* Body formatting */
+    /* Body formatting ------------------------------------- */
         
         /* Horizontal Rule */
         hr {
@@ -98,12 +93,22 @@
         }
     
     
-    /* Voting arrows */
+    /* Text boxes ------------------------------------------ */
+    
+        .form-control {
+            font-family: Arial, sans-serif;
+            background-color: #FAFAFA;
+            border: 1px solid #DDD;
+            border-radius: 0;
+        }
+    
+    
+    /* Voting arrows --------------------------------------- */
     
         .arrow-downvote,.arrow-downvoted,.arrow-upvote,.arrow-upvoted {
             width: 18px;
             height: 19px;
-            background: url('http://i.imgur.com/zTonBCJ.png')
+            background: url('http://i.imgur.com/BDutAqr.png')
         }
         
             /* Downvote */
@@ -113,137 +118,315 @@
             /* Upvote */
             .arrow-upvote {background-position: -18px 0;}
                 .arrow-upvoted {background-position: -18px -19px;}
-
-
-
-/*
-    Header
-    ------
-            */
-
-    #header {
-        background: url(http://i.imgur.com/IVAIgeY.png) no-repeat fixed 50% 0%; /* Header image */
-        border: 0;
-    }
-
-
-    /* Other subverses links */
-        
-        #sr-header-area {
-            color: #666;
-            border: 0;
+                
+                
+    /* Submission boxes ------------------------------------ */
+    
+        .well {
+            margin-top: 26px;
+            border: 1px solid #F0F0F0;
         }
+
+
+    /* Shadows --------------------------------------------- */
+
+        .side,.link,.commentarea .sitetable,#header:after,.well {
+            -moz-box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+            -webkit-box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+    
+    
+    /* Buttons --------------------------------------------- */
+    
+        .btn-default,.btn-whoaverse,.btn-whoaverse-default,.btn-whoaverse-medium,.btn-whoaverse-paging,.titlebox h5 a {
+            border-radius: 0;
+            border: 0;
+            text-shadow: none;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+            -moz-box-shadow: inset -2px -2px 0 rgba(0,0,0,0.2);
+            -webkit-box-shadow: inset -2px -2px 0 rgba(0,0,0,0.2);
+            box-shadow: inset -2px -2px 0 rgba(0,0,0,0.2);
+        }
+
+
+
+/*  Transitions
+    ============================================================================ */
+
+    /* Opacity --------------------------------------------- */
+    
+        .tagline .commentvotesratio,.link:hover .entry li a,
+            #header-bottom-right,
+            #sr-header-area {
+            -webkit-transition: opacity 0.25s ease;
+            -moz-transition: opacity 0.25s ease;
+            -o-transition: opacity 0.25s ease;
+            transition: opacity 0.25s ease;
+        }
+    
+    
+    /* Color ----------------------------------------------- */
+    
+        /* Text */
+        .tabmenu li a,.pagename a,
+            #header-bottom-right:hover .user {
+            -webkit-transition: color 0.25s ease;
+            -moz-transition: color 0.25s ease;
+            -o-transition: color 0.25s ease;
+            transition: color 0.25s ease;
+        }
+        
+        /* Border */
+        .tabmenu li a {
+            -webkit-transition: border-color 0.25s ease;
+            -moz-transition: border-color 0.25s ease;
+            -o-transition: border-color 0.25s ease;
+            transition: border-color 0.25s ease;
+        }
+
+
+
+/*  Header
+    ============================================================================ */
+
+    #header {border: 0;}
+    
+    
+    /* Top-top header bar (other subverses links) ---------- */
+        
+        /* Background */
+        #sr-header-area,#sr-more-link {
+            background-color: #444 !important;
+            border: 1px solid #666 !important;
+            opacity: 0.5;
+        }
+            
+        /* Hover effect */
+        #sr-header-area:hover,#sr-more-link:hover,
+            .whoaSubscriptionMenu ul:hover {opacity: 1;}
         
         /* Links */
-        #sr-header-area a:hover {text-decoration: none;}
+        #sr-header-area,#sr-header-area a,#sr-more-link {color: #EEE;}
+            #sr-header-area a:hover,#sr-more-link {text-decoration: none;}
+        
+        /* "My subverses" drop-down menu */
+        .whoaSubscriptionMenu li ul{border: 1px solid #666;}
+        .whoaSubscriptionMenu li ul li a:link,.whoaSubscriptionMenu li ul li a:visited{background-color:#444;border:1px solid #666;}
+        .whoaSubscriptionMenu li ul li a:hover{background-color:#555;}
+        .whoaSubscriptionMenu ul {position: absolute;z-index: 50;}
 
-
-    /* WhoaVerse logo 
     
-        #header-img {
-            width: 125px;
-            height: 44px;
-            background: url(http://i.imgur.com/zTonBCJ.png) 0 -52px;
-        } */
+    /* Main header bar ------------------------------------- */
     
-    
-    /* Page name */
-
-        .pagename {
-            font-size: 14px;
-            font-variant: normal;
-            text-transform: lowercase;
+        #header:after {
+            position: absolute;
+            display: block;
+            top: 150px;
+            left: 0px;
+            z-index: 1;
+            width: 100%;
+            height: 50px;
+            border: 1px solid #F0F0F0;
+            content: " ";
         }
-            .pagename a {
-                color: #FFF;
-                font-weight: normal;
+    
+    
+        /* Left (logo, subverse name, tab menu ...) -------- */
+        
+            #header-bottom-left {
+                position: absolute;
+                z-index: 10;
+                width: 50px;
+                top: 150px;
+                left: 10px;
+                margin: 0;
             }
+            
+            
+            /* Logo ---------------------------------------- */
+            
+                #header-img {
+                    position: absolute;
+                    z-index: 5;
+                    top: 3px;
+                    left: 0;
+                } 
 
-
-    /* Tab menu */
-        
-        .tabmenu li {
-            font-weight: normal;
-            text-transform: lowercase;
-            margin: 0;
-            padding: 4px 6px 0 6px !important;
-            font-size: 16px;
-            border: 0;
-        }
-            .tabmenu li,.tabmenu li a,.tabmenu li.selected a {background-color: transparent;}
-
-        
-        /* Unselected tabs */
-        
-            .tabmenu li a {
-                color: rgba(255,255,255,0.3);
-                padding: 2px 2px 0 2px;
-            }
-                .tabmenu li a:hover {
-                    border-top: 2px solid #CCC;
-                    color: #FFF;
+            
+            /* Subverse name ------------------------------- */
+            
+                .pagename {
+                    font-variant: normal;
+                    text-transform: lowercase;
+                    font-size: 18px;
+                }
+                .pagename a {
+                    color: #CCC;
+                    font-weight: normal;
+                    position: absolute;
+                    z-index: 15;
+                    top: 17px;
+                    left: 131px;
+                    height: 24px;
+                    text-decoration: none !important;
                 }
 
-        
-        /* Selected tab */
-        
-            .tabmenu li.selected {border-bottom: 1px solid #EEE;}
-                .tabmenu li.selected a {
-                    border: 0 !important;
-                    color: #666;
+
+            /* Tab menu ------------------------------------ */
+                
+                #header .tabmenu {
+                    display: block;
+                    position: absolute;
+                    top: 13px;
+                    margin: 0;
+                    right: 0px;
+                    left: 260px;
+                    z-index: 6;
+                    padding: 0px;
+                    height: 24px;
+                    background-color: transparent !important;
+                    border-bottom: 0px solid;
+                    color: #999;
+                    list-style-type: none;
+                    vertical-align: bottom;
+                    text-align: left;
+                    padding-left: 55px;
+                    white-space: nowrap;
+                    font-weight: normal;
+                    min-width: 450px;
                 }
-                    .tabmenu li.selected a:hover {color: #333;}
+                
+                    .tabmenu li {
+                        font-weight: normal;
+                        display: inline-block;
+                        text-transform: lowercase;
+                        margin: 0;
+                        padding: 4px 6px 0 6px !important;
+                        font-size: 18px;
+                        border: 0;
+                    }
+
+                    
+                    /* Unselected tabs --------------------- */
+                    
+                        .tabmenu li a {
+                            color: #AAA;
+                            padding: 2px 2px 0 2px;
+                            border-top: 2px solid #FFF;
+                            background-color: transparent !important;
+                        }
+                            .tabmenu li a:hover {
+                                border-top: 2px solid #AAA;
+                                color: #777;
+                            }
+
+                    
+                    /* Selected tab ------------------------ */
+                    
+                        .tabmenu li.selected {border: 0;}
+                            .tabmenu li.selected a {
+                                border: 0 !important;
+                                color: #555;
+                            }
+                                .tabmenu li.selected a:hover {color: #333;}
         
 
-    /* Account information */
+        /* Right (account information) --------------------- */
 
-        #header-bottom-right{border-radius: 0;}
+            #header-bottom-right {
+                opacity: 0;
+                display: block;
+                border-radius: 0;
+                position: absolute;
+                z-index: 6;
+                top: 174px;
+                right: 0;
+                padding: 0;
+                margin-right: 20px;
+                width: auto;
+                height: 12px;
+                background-color: transparent !important;
+            }
+            
+                /* Hover effects */
+                #header:hover #header-bottom-right {opacity: 1;}
+                #header-bottom-right,#header-bottom-right a,#header-bottom-right .user,#header-bottom-right .separator {color: #888;}
+                    #header-bottom-right:hover .user {color: #111;}
     
 
 
-/*
-    Sidebar
-    -------
-             */
+/*  Sidebar
+    ============================================================================ */
 
     .side {
-        margin: 24px 10px 0 0;
+        margin: 60px 10px 0 00;
         padding: 10px;
         width: 300px;
+        border: 1px solid #F0F0F0;
     }
 
 
-    /* Headings */
+    /* Search ---------------------------------------------- */
+    
+        .side .form-control {
+            margin: 0 -10px;
+            border-radius: 0;
+            width: 298px;
+            border-left: 0;
+            border-right: 0;
+            text-align: center;
+        }
+    
+    
+    /* Headings -------------------------------------------- */
 
         
-        /* Description */
+        /* Description ------------------------------------- */
         
-            .side .md h2 {
-                font-size: 150%;
+            .titlebox .md {font-size: 14px;}
+            
+            /* Button */
+            .titlebox h5 a, .titlebox h5 a:hover {
+                width: 100%;
+                height: 27px;
+                display: block;
+                font-size: 12px;
+                font-weight: normal;
                 text-align: center;
-                background: #59F;
-                color: #FFF !important;
-                padding: 3px;
-                font-weight: normal !important;
+                line-height: 27px;
+                margin: 10px 0;
+                text-decoration: none;
+                color: #fff;
+                cursor: pointer;
             }
 
         
-        /* Submission info */
-        .titlebox.submissioninfo h2 {
-            color: #444;
-            border-bottom: 1px dotted gray;
-        }
-            .submissioninfo {border-bottom: 1px solid gray;}
+        /* Submission info --------------------------------- */
+            
+            .titlebox.submissioninfo h2 {
+                color: #444;
+                border-bottom: 1px dotted gray;
+            }
+                .submissioninfo {border-bottom: 1px solid gray;}
         
-        /* Subverse name */
+        
+        /* Subverse name ----------------------------------- */
+        
         .titlebox h1 {
+            color: #333;
             border-bottom: 1px dotted gray;
             text-transform: lowercase;
             font-style: normal;
             font-size: 18px;
+            font-weight: normal;
         }
+            .titlebox h1 a:hover {text-decoration: none;}
         
-        /* Moderators, Administration tools ... */
+        
+        /* Moderators, Administration tools ... ------------ */
+        
         .side .title {border-bottom: 1px dotted gray;}
             .side .title h1 {text-transform: lowercase;}
             
@@ -253,15 +436,13 @@
 
 
 
-/*
-    Post Feed
-    ---------
-               */
+/*  Post feed
+    ============================================================================ */
 
-    .content {margin: 0 0 0 10px;}
+    .content {margin: 34px 0 0 10px;}
 
 
-    /* Posts list */
+    /* Posts list ------------------------------------------ */
 
         .link {
             padding: 10px 0;
@@ -277,9 +458,11 @@
             }
             
             /* Post link domain */
-            .domain,.domain a {
+            .domain {color: #FFF;}
+            .domain a {
                 color: #AAA;
                 text-decoration: none !important;
+                font-weight: bold;
             }
             
             /* Post tag line */
@@ -287,10 +470,18 @@
                 font-size: 12px;
                 color: #AAA
             }
-                .tagline a {text-decoration: none !important;}
+                .link .tagline a {text-decoration: none !important;}
+                .link .tagline .commentvotesratio {opacity: 0;}
+                    .link:hover .tagline .commentvotesratio {opacity: 1;}
+            
+            
+            /* Discuss, comments, share ... */
+            .link .entry li a {opacity: 0;}
+            .link:hover .entry li a {opacity: 1;}
+                .link .entry li .comments {opacity: 1 !important;}
         
         
-        /* Vote score */
+        /* Vote score -------------------------------------- */
         
             	.link .score {color:#666;}
 
@@ -298,11 +489,11 @@
                     .link .score.dislikes {color: #58D;}
         
         
-        /* Expando button */
+        /* Expando button ---------------------------------- */
         
             .expando-button.selftext.collapsed,.expando-button.selftext.collapsed:hover,.expando-button.selftext.expanded,.expando-button.selftext.expanded:hover {
                 background-repeat: no-repeat;
-                background: url(http://i.imgur.com/zTonBCJ.png);
+                background: url(http://i.imgur.com/BDutAqr.png);
                 height: 26px;
                 width: 26px;
             }
@@ -315,17 +506,11 @@
                 /* Collapsed */
                 .expando-button.selftext.collapsed {background-position: -36px 0;}
                     .expando-button.selftext.collapsed:hover {background-position: -36px -26px;}
-                
-                /* Expanded */
-/*              .expando-button.selftext.expanded {background-position: -62px 0;}
-                    .expando-button.selftext.expanded:hover {background-position: -62px -26px;} */
         
             
 
-/*
-    Post page
-    ---------
-               */
+/*  Post page
+    ============================================================================ */
 
     .link .usertext .md {
         background-color: #FAFAFA;
@@ -335,34 +520,42 @@
     }
     
 
-    /* Heading formatting */
+    /* Heading formatting ---------------------------------- */
 
-        .usertext .md h1 {
+        /* Heading 1 */
+        .usertext .md h1,
+            .commentarea .md h1 {
             border-bottom: 1px dotted gray;
             font-size: 150%;
         }
-        .usertext .md h2 {
+        
+        /* Heading 2 */
+        .usertext .md h2,
+            .commentarea .md h2 {
             color: #555;
             font-size: 135%;
             font-weight: bold;
         }
-        .usertext .md h3 {font-size: 120%;}
+        
+        /* Heading 3 */
+        .usertext .md h3,
+            .commentarea .md h3 {font-size: 120%;}
 
 
-    /* Comments */
+    /* Comments -------------------------------------------- */
 
         .commentarea .sitetable {margin-right: 320px;}
 
 
 
-/*
-    Footer
-    ------
-            */
+/*  Footer
+    ============================================================================ */
 
     .footer:before {
         display: block;
         margin: 10px;
-        font-size: 14px;
-        content: "/v/Planate theme"
+        font-size: 16px;
+        content: "Subverse theme /v/Planate" /* Please do not remove! */
     }
+    
+    .footer {border: 0;}
