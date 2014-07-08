@@ -44,7 +44,7 @@
     /* Link colors ----------------------------------------- */
 
         /* Global */
-        .link a,a,.link .title.may-blank,.link .title .domain a:hover,.sidecontentbox .content a:hover,.footer:before,.comment .expand:hover,#sr-header-area a:hover,.pagename a:hover,#header-bottom-right a:hover,.link .entry .flat-list.buttons li .comments
+        .link a,a,.link .title.may-blank,.link .title .domain a:hover,.sidecontentbox .content a:hover,.footer:before,.comment .expand:hover,#sr-header-area a:hover,.pagename a:hover,#header-bottom-right a:hover,.link .entry .flat-list.buttons li .comments,.tagline a
             {color: #48E;}
             
             /* On-hover */
@@ -54,6 +54,14 @@
         /* Top-header bar — hover */
         #sr-header-area a:hover
             {color: #6ba6ff;}
+
+        /* Mod usernames */
+        .tagline .moderator
+            {color: #27B766;}
+
+        /* Submitter */
+        .tagline .submitter
+            {color: #3A6FBD;}
 
 
     /* Button colors --------------------------------------- */
@@ -668,6 +676,9 @@
             border: 1px solid #F0F0F0;
             border-top: 0;
         }
+
+        /* Expand button */
+        .comment .expand {color: #BBB;}
         
         /* Reply form */
         .content form {
