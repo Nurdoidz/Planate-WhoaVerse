@@ -451,7 +451,6 @@
                 .titlebox .md h2 {
                     text-align: center;
                     font-size: 16px !important;
-                    background-color: #48E;
                     padding: 5px 0;
                     color: #FFF !important;
                     margin-top: 15px;
@@ -470,7 +469,6 @@
                     -webkit-box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
                     box-shadow: 0 3px 0 rgba(0,0,0,0.1);
                     background-color: #FFF;
-                    border: 1px solid #48E;
                     padding-top: 0;
                 }
 
