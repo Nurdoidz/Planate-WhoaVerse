@@ -3,7 +3,7 @@
             
             Planate theme stylesheet for WhoaVerse subverses
             By Nurdoidz
-            Version 1.0 (Last modified: 2014-07-07)
+            Version 1.1 (Last modified: 2014-07-08)
             For more information, go to http://whoaverse.com/v/Planate.
             
             For custom styling documentation, visit
@@ -28,7 +28,7 @@
             {background-color: #EEE;}
         
         /* Boxes (lighter) */
-        .side,.link,.commentarea .sitetable,.comment .expand:hover,.tabmenu,.well,#header:after 
+        .side,.link,.commentarea,.comment .expand:hover,.tabmenu,.well,#header:after,.content form
             {background-color: #FFF;}
 
 
@@ -43,23 +43,39 @@
 
     /* Link colors ----------------------------------------- */
 
-        .link a,a,.link .title.may-blank,.link .title .domain a:hover,.sidecontentbox .content a:hover,.footer:before,.comment .expand:hover,#sr-header-area a:hover,.pagename a:hover,#header-bottom-right a:hover
+        /* Global */
+        .link a,a,.link .title.may-blank,.link .title .domain a:hover,.sidecontentbox .content a:hover,.footer:before,.comment .expand:hover,#sr-header-area a:hover,.pagename a:hover,#header-bottom-right a:hover,.link .entry .flat-list.buttons li .comments
             {color: #48E;}
             
             /* On-hover */
-            a:hover,.link a:hover,.link .title.may-blank:hover 
+            a:hover,.link a:hover,.link .title.may-blank:hover,.link .entry .flat-list.buttons li .comments:hover
                 {color: #59F;}
+        
+        /* Top-header bar — hover */
+        #sr-header-area a:hover
+            {color: #6ba6ff;}
 
 
     /* Button colors --------------------------------------- */
 
-        .btn-default,.btn-whoaverse,.btn-whoaverse-default,.btn-whoaverse-medium,.btn-whoaverse-paging,.titlebox h5 a {
+        .btn-default,.btn-whoaverse,.btn-whoaverse-default,.btn-whoaverse-paging,.titlebox h5 a {
             color: #FFF !important;
             background-color: #48E;
         }
             /* On-hover */
-            .btn-default:hover,.btn-whoaverse:hover,.btn-whoaverse-default:hover,.btn-whoaverse-medium:hover,.btn-whoaverse-paging:hover,.titlebox h5 a:hover
+            .btn-default:hover,.btn-whoaverse:hover,.btn-whoaverse-default:hover,.btn-whoaverse-paging:hover,.titlebox h5 a:hover
                 {background-color: #59F;}
+
+
+    /* Sidebar headings color ------------------------------ */
+
+        /* Heading background */
+        .titlebox .md h2
+            {background-color: #48E;}
+
+        /* Body border */
+        .titlebox .md h2 + blockquote
+            {border: 1px solid #48E;}
 
 
 
@@ -76,8 +92,9 @@
         
         /* Horizontal Rule */
         hr {
-            margin: 5px 0;
-            border: 1px solid #DDD;
+            display: hidden !important;
+            margin: 0;
+            padding: 0;
         }
 
 
@@ -90,6 +107,18 @@
         code {
             color: #555;
             background-color: #EEE;
+        }
+        
+        /* Block quote */
+        .md blockquote {
+            border: 1px solid #DDD;
+            background-color: #FAFAFA;
+            margin: 5px 15px 5px 0;
+            border-radius: 0;
+            padding: 5px 10px 10px;
+            -moz-box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+            -webkit-box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+            box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
         }
     
     
@@ -130,7 +159,7 @@
 
     /* Shadows --------------------------------------------- */
 
-        .side,.link,.commentarea .sitetable,#header:after,.well {
+        .side,.link,.commentarea,#header:after,.well,.content form {
             -moz-box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
             -webkit-box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
             box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
@@ -139,16 +168,44 @@
     
     /* Buttons --------------------------------------------- */
     
+        /* Global */
         .btn-default,.btn-whoaverse,.btn-whoaverse-default,.btn-whoaverse-medium,.btn-whoaverse-paging,.titlebox h5 a {
-            border-radius: 0;
+            border-radius: 2px;
             border: 0;
             text-shadow: none;
-            font-family: Arial, sans-serif;
+            font-family: "Segoe UI", Calibri, Ubuntu, Arial, sans-serif;
             font-weight: normal;
+            font-size: 16px;
+            padding: 6px;
             -moz-box-shadow: inset -2px -2px 0 rgba(0,0,0,0.2);
             -webkit-box-shadow: inset -2px -2px 0 rgba(0,0,0,0.2);
             box-shadow: inset -2px -2px 0 rgba(0,0,0,0.2);
         }
+        
+        /* Subscribe/unsubscribe */
+        .btn-whoaverse-paging {
+            font-size: 10px;
+            padding: 3px;
+        }
+                
+        /* Submit */
+        .btn-whoaverse-medium,.well .btn-whoaverse,.commentarea .btn-whoaverse-paging {
+            background-color: #FAFAFA;
+            border: 1px solid #DDD;
+            font-size: 14px;
+            color: #444 !important;
+            -moz-box-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+            -webkit-box-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+            box-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+        }
+            .btn-whoaverse-medium:hover,.well .btn-whoaverse:hover,.commentarea .btn-whoaverse-paging:hover {
+                background-color: #FAFAFA;
+                border-color: #CCC;
+                color: #333 !important;
+            }
+        
+        /* Comment reply */
+        .commentarea .btn-whoaverse-paging {font-size: 12px;}
 
 
 
@@ -271,6 +328,7 @@
                     left: 131px;
                     height: 24px;
                     text-decoration: none !important;
+                    font-family: "Segoe UI", Calibri, Ubuntu, Arial, sans-serif;
                 }
 
 
@@ -296,6 +354,7 @@
                     white-space: nowrap;
                     font-weight: normal;
                     min-width: 450px;
+                    font-family: "Segoe UI", Calibri, Ubuntu, Arial, sans-serif;
                 }
                 
                     .tabmenu li {
@@ -386,43 +445,87 @@
         /* Description ------------------------------------- */
         
             .titlebox .md {font-size: 14px;}
-            
+
+            /* Box heading --------------------------------- */
+
+                .titlebox .md h2 {
+                    text-align: center;
+                    font-size: 16px !important;
+                    background-color: #48E;
+                    padding: 5px 0;
+                    color: #FFF !important;
+                    margin-top: 15px;
+                    font-family: "Segoe UI", Calibri, Ubuntu, Arial, sans-serif;
+                }
+
+                .titlebox .md ul {
+                    margin-left: 20px;
+                    margin-right: 10px;
+                }
+
+                .titlebox .md h2 + blockquote {
+                    margin: 0;
+                    font-size: 13px;
+                    -moz-box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+                    -webkit-box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+                    box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+                    background-color: #FFF;
+                    border: 1px solid #48E;
+                    padding-top: 0;
+                }
+
+
             /* Button */
             .titlebox h5 a, .titlebox h5 a:hover {
                 width: 100%;
-                height: 27px;
+                height: 30px;
                 display: block;
-                font-size: 12px;
+                font-size: 14px;
                 font-weight: normal;
                 text-align: center;
-                line-height: 27px;
+                line-height: 30px;
                 margin: 10px 0;
                 text-decoration: none;
                 color: #fff;
                 cursor: pointer;
+                padding: 0;
             }
 
         
         /* Submission info --------------------------------- */
             
+            .submissioninfo {border: 0;}
+            
             .titlebox.submissioninfo h2 {
                 color: #444;
-                border-bottom: 1px dotted gray;
+                border: 0 !important;
+                font-weight: bold;
+                font-size: 14px;
             }
-                .submissioninfo {border-bottom: 1px solid gray;}
+            
+            .titlebox .bottom {border: 0;}
         
         
         /* Subverse name ----------------------------------- */
         
-        .titlebox h1 {
-            color: #333;
-            border-bottom: 1px dotted gray;
-            text-transform: lowercase;
-            font-style: normal;
-            font-size: 18px;
-            font-weight: normal;
-        }
-            .titlebox h1 a:hover {text-decoration: none;}
+            .titlebox h1 a,.titlebox h1 {
+                margin: 0;
+                margin-bottom: 10px;
+                color: #333;
+                border: 0;
+                text-transform: lowercase;
+                font-style: normal;
+                font-size: 24px;
+                font-family: "Segoe UI", Calibri, Ubuntu, Arial, sans-serif;
+                font-weight: lighter;
+                text-align: left;
+            }
+                .titlebox h1 a:hover {text-decoration: none;}
+
+
+        /* Subscribe --------------------------------------- */
+
+            .side .btn-whoaverse-paging {padding: 3px 10px;}
         
         
         /* Moderators, Administration tools ... ------------ */
@@ -456,6 +559,7 @@
                 font-weight: bold;
                 font-size: 18px;
             }
+                .link .title a:hover {text-decoration: underline;}
             
             /* Post link domain */
             .domain {color: #FFF;}
@@ -476,9 +580,9 @@
             
             
             /* Discuss, comments, share ... */
-            .link .entry li a {opacity: 0;}
-            .link:hover .entry li a {opacity: 1;}
-                .link .entry li .comments {opacity: 1 !important;}
+            .link .entry .flat-list.buttons li a {opacity: 0;}
+            .link:hover .entry .flat-list.buttons li a {opacity: 1;}
+                .link .entry .flat-list.buttons li .comments {opacity: 1 !important;}
         
         
         /* Vote score -------------------------------------- */
@@ -544,7 +648,44 @@
 
     /* Comments -------------------------------------------- */
 
-        .commentarea .sitetable {margin-right: 320px;}
+        /* Comment area */
+        .commentarea {
+            margin-right: 320px;
+            margin-top: -1px;
+            padding: 10px;
+            border: 1px solid #F0F0F0;
+            border-top: 0;
+        }
+        
+        /* Reply form */
+        .content form {
+            margin: 0 320px -3px 0;
+            padding: 10px;
+            border: 1px solid #F0F0F0;
+            border-bottom: 0;
+        }
+            .content form hr {border: 0;}
+            .sitetable form,.well form {
+                margin: 0;
+                padding: 0;
+                -moz-box-shadow: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                background-color: transparent;
+                border: 0;
+            }
+            
+        /* Single comments */
+        .comment .child, .comment .showreplies {
+            margin-top: 10px !important;
+            padding-left: 28px !important;
+        }
+        .comment {padding: 5px 8px 5px 5px !important}
+
+        /* Alternating comment styles */
+        .comment .comment {border: 1px solid #DDD;}
+        .comment .comment,.comment .comment .comment .comment,.comment .comment .comment .comment .comment .comment,.comment .comment .comment .comment .comment .comment .comment .comment {background-color: #FAFAFA;}
+        .comment .comment .comment,.comment .comment .comment .comment .comment,.comment .comment .comment .comment .comment .comment .comment,.comment .comment .comment .comment .comment .comment .comment .comment .comment {background-color: #FFF;}
 
 
 
