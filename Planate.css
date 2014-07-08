@@ -78,6 +78,20 @@
             {border: 1px solid #48E;}
 
 
+    /* Name of subscribers --------------------------------- */
+
+        .subscribers .word {visibility: hidden;}
+        .subscribers .word:before {
+            content: "subscribers";
+            visibility: visible
+        }
+        .users-online .word {visibility: hidden;}
+        .users-online .word:before {
+            content: "users online";
+            visibility: visible;
+        }
+
+
 
 /*  Body
     ============================================================================ */
