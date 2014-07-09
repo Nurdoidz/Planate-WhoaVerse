@@ -17,80 +17,157 @@
     ============================================================================ */
 
     /* Header image */
-    
-        #header {background: url(http://i.imgur.com/IVAIgeY.png) no-repeat fixed 50% 0;}
+    #header {background: url(http://i.imgur.com/IVAIgeY.png) no-repeat fixed 50% 0;}
     
     
     /* Background colors ----------------------------------- */
 
-        /* Outer (darker) */
-        body,#sr-header-area,#header-bottom-right 
-            {background-color: #EEE;}
-        
-        /* Boxes (lighter) */
-        .side,.link,.commentarea,.comment .expand:hover,.tabmenu,.well,#header:after,.content form
-            {background-color: #FFF;}
+        body                                                                                {background-color: #EEE;} /* Global body */
+        .md blockquote                                                                   {background-color: #FAFAFA;} /* Global block quote */
+        pre                                                                                 {background-color: #EEE;} /* Global code */
+        .form-control                                                                    {background-color: #FAFAFA;} /* Global text box */
+        #header:after                                                                       {background-color: #FFF;} /* Header bar */
+        .link,.commentarea,.content form                                                    {background-color: #FFF;} /* Links and comments */
+        .link .usertext .md                                                              {background-color: #FAFAFA;} /* Link, self text */
+        .side                                                                               {background-color: #FFF;} /* Sidebar */
+        .side .form-control                                                              {background-color: #F2F2F2;} /* Sidebar search box */
+        .titlebox .md h2                                                                    {background-color: #48E;} /* Sidebar, special heading */
+        .commenttextarea,.form-control                                                   {background-color: #F2F2F2;} /* Comment form */
+        .comment .comment,
+        .comment .comment .comment .comment,
+        .comment .comment .comment .comment .comment .comment,
+        .comment .comment .comment .comment .comment .comment .comment .comment          {background-color: #FAFAFA;} /* Comment thread, even */
+        .comment .comment .comment,
+        .comment .comment .comment .comment .comment,
+        .comment .comment .comment .comment .comment .comment .comment,
+        .comment .comment .comment .comment .comment .comment .comment .comment .comment    {background-color: #FFF;} /* Comment thread, odd */
+        .well                                                                               {background-color: #FFF;} /* Submit link form */
+        .panel                                                                       {background-color: transparent;} /* Submit link table */
+        .panel-default > .panel-heading                                                     {background-color: #48E;} /* Submit link table, title bar */
+        .alert-info,.info th,thead>tr>td.info,
+        .table>tbody>tr>td.info,.table>tfoot>tr>td.info,
+        .table>thead>tr>th.info,.table>tbody>tr>th.info,
+        .table>tfoot>tr>th.info,.table>thead>tr.info>td,
+        .table>tbody>tr.info>td,.table>tfoot>tr.info>td,
+        .table>thead>tr.info>th,.table>tbody>tr.info>th,
+        .table>tfoot>tr.info>th                                                             {background-color: #48E;} /* Submit link table, information table */
+        .table-striped > tbody > tr:nth-child(2n+1) > td,
+        .table-striped > tbody > tr:nth-child(2n+1) > th                                 {background-color: #FAFAFA;} /* Submit link table, odd rows */
 
 
-    /* Notification/information box color ------------------ */
+    /* Border colors --------------------------------------- */
 
-        .alert-info,.info th,thead>tr>td.info,.table>tbody>tr>td.info,.table>tfoot>tr>td.info,.table>thead>tr>th.info,.table>tbody>tr>th.info,.table>tfoot>tr>th.info,.table>thead>tr.info>td,.table>tbody>tr.info>td,.table>tfoot>tr.info>td,.table>thead>tr.info>th,.table>tbody>tr.info>th,.table>tfoot>tr.info>th {
-            background-color: #48E;
-            border: 0;
-            border-radius: 0;
-        }
+        .md blockquote                {border: 1px solid #DDD;} /* Global block quote */
+        pre                           {border: 1px solid #CCC;} /* Global code */
+        .form-control                 {border: 1px solid #DDD;} /* Global text box */
+        #header:after              {border: 1px solid #F0F0F0;} /* Header, main */
+        .tabmenu li a      {border-top: 2px solid transparent;} /* Header tab menu, unselected */
+        .tabmenu li a:hover       {border-top: 2px solid #AAA;} /* Header tab menu, unselected (hover) */
+        .link                      {border: 1px solid #F0F0F0;} /* Link */
+        .link .usertext .md           {border: 1px solid #DDD;} /* Link, self text */
+        .usertext .md h1,
+        .commentarea .md h1   {border-bottom: 1px dotted gray;} /* Link, self text/comment heading */
+        .side                      {border: 1px solid #F0F0F0;} /* Sidebar */
+        .side .form-control            {border-color: #F0F0F0;} /* Sidebar search box */
+        .titlebox .md h2 + blockquote {border: 1px solid #48E;} /* Sidebar, special heading */
+        .side .title          {border-bottom: 1px dotted gray;} /* Sidebar moderators and admin tools */
+        .commentarea               {border: 1px solid #F0F0F0;} /* Comment */
+        .content form              {border: 1px solid #F0F0F0;} /* Comment form area */
+        .commenttextarea,
+        .form-control              {border: 1px solid #FAFAFA;} /* Comment form */
+        .comment .comment             {border: 1px solid #DDD;} /* Comment thread, alternating design */
+        .well                      {border: 1px solid #F0F0F0;} /* Submit box */
+        .panel                        {border: 1px solid #EEE;} /* Submit link table */
+  
+
+    /* Hyperlink colors ----------------------------------------- */
+
+        /* Colored */
+        a                                                         {color: #48E;} /* Global default */
+            a:hover                                               {color: #59F;} /* Global default (hover) */
+        #sr-header-area a:hover                                {color: #6BA6FF;} /* Header, top bar (hover) */
+        .pagename a:hover                                         {color: #48E;} /* Header subverse name (hover) */
+        .tabmenu li.selected a                                    {color: #555;} /* Header tab menu, selected */
+        .tabmenu li.selected a:hover                              {color: #333;} /* Header tab menu, selected (hover) */
+        .tabmenu li a                                             {color: #AAA;} /* Header tab menu, unselected */
+            .tabmenu li a:hover                                   {color: #777;} /* Header tab menu, unselected (hover) */
+        #header-bottom-right a:hover                              {color: #48E;} /* Header, right (hover) */
+        .link a                                                   {color: #48E;} /* Link */
+            .link a:hover                                         {color: #59F;} /* Link (hover) */
+        .link .title.may-blank                                    {color: #48E;} /* Link title */
+            .link .title.may-blank:hover                          {color: #59F;} /* Link title (hover) */
+        .domain a                                                 {color: #AAA;} /* Link domain */
+            .domain a:hover                                       {color: #48E;} /* Link domain (hover) */
+        .link .entry .flat-list.buttons li .comments              {color: #48E;} /* Link 'comments' */
+            .link .entry .flat-list.buttons li .comments:hover    {color: #59F;} /* Link 'comments' (hover) */
+        .side a                                                   {color: #48E;} /* Sidebar */
+            .side a:hover                                         {color: #59F;} /* Sidebar (hover) */
+        .titlebox h1,.titlebox h1 a                               {color: #555;} /* Sidebar subverse name */
+        .titlebox h1 a:hover                                      {color: #48E;} /* Sidebar subverse name (hover) */
+        .titlebox h5 a,.titlebox h5 a:hover                       {color: #FFF;} /* Sidebar, custom h5 button */
+        .sidecontentbox .content a                                {color: #666;} /* Sidebar moderators list */
+            .sidecontentbox .content a:hover                      {color: #48E;} /* Sidebar moderators list (hover) */
+        .comment .expand:hover                                    {color: #48E;} /* Comment, expand/collapse (hover) */
+        .tagline a                                                {color: #48E;} /* Comment tagline */
+        .tagline .moderator                                    {color: #22AA20;} /* Comment, 'mod' */
+        .tagline .submitter                                    {color: #3A6FBD;} /* Comment, 'submitter' */
+        /* Uncolored */
+        .pagename a                                               {color: #CCC;} /* Header, subverse name */
 
 
-    /* Link colors ----------------------------------------- */
+    /* Text colors ----------------------------------------- */
 
-        /* Global */
-        .link a,a,.link .title.may-blank,.link .title .domain a:hover,.sidecontentbox .content a:hover,.footer:before,.comment .expand:hover,#sr-header-area a:hover,.pagename a:hover,#header-bottom-right a:hover,.link .entry .flat-list.buttons li .comments,.tagline a
-            {color: #48E;}
-            
-            /* On-hover */
-            a:hover,.link a:hover,.link .title.may-blank:hover,.link .entry .flat-list.buttons li .comments:hover
-                {color: #59F;}
-        
-        /* Top-header bar — hover */
-        #sr-header-area a:hover
-            {color: #6ba6ff;}
-
-        /* Mod usernames */
-        .tagline .moderator
-            {color: #27B766;}
-
-        /* Submitter */
-        .tagline .submitter
-            {color: #3A6FBD;}
+        body                                     {color: #444;} /* Global default */
+        pre                                      {color: #555;} /* Global code */
+        .user                                    {color: #111;} /* Global points */
+        .side                                    {color: #444;} /* Sidebar */
+        .side .form-control                      {color: #444;} /* Sidebar search box (user) */
+        .side .form-control::-moz-placeholder    {color: #888;} /* Sidebar search box (unfocused) */
+        .h6                                      {color: #666;} /* Sidebar submission info */
+        .titlebox.submissioninfo h2              {color: #444;} /* Sidebar submission info heading */
+        .titlebox .md h2              {color: #FFF !important;} /* Sidebar, special heading */
+        .titlebox .bottom                        {color: #666;} /* Sidebar, 'created by ...' */
+        .side .title h1                          {color: #444;} /* Sidebar moderators and admin tools */
+        .domain                           {color: transparent;} /* Link domain */
+        .tagline                                 {color: #AAA;} /* Link tagline */
+        .link .score                             {color: #999;} /* Link score */
+            .link .score.likes                   {color: #D64;} /* Link score, like */
+            .link .score.dislikes                {color: #58D;} /* Link score, dislike */
+        .usertext .md h1,.usertext .md .h1,
+        .usertext .md h2,.usertext .md .h2,
+        .usertext .md h3,.usertext .md .h3,
+        .usertext .md h4,.usertext .md .h4,
+        .usertext .md h5,.usertext .md .h5,
+        .usertext .md h6,.usertext .md .h6       {color: #444;} /* Link, self text headings */
+        .commenttextarea,.form-control           {color: #333;} /* Comment form */
+        .comment .expand                         {color: #777;} /* Comment, expand/collapse */
+        .panel-default > .panel-heading          {color: #333;} /* Submit link table, title bar */
+        .footer:before                           {color: #888;} /* Footer, 'Subverse theme' */
 
 
     /* Button colors --------------------------------------- */
 
-        .btn-default,.btn-whoaverse,.btn-whoaverse-default,.btn-whoaverse-paging,.titlebox h5 a {
-            color: #FFF !important;
-            background-color: #48E;
-        }
-            /* On-hover */
-            .btn-default:hover,.btn-whoaverse:hover,.btn-whoaverse-default:hover,.btn-whoaverse-paging:hover,.titlebox h5 a:hover
-                {background-color: #59F;}
-
-
-    /* Sidebar headings color ------------------------------ */
-
-        /* Heading background */
-        .titlebox .md h2
-            {background-color: #48E;}
-
-        /* Body border */
-        .titlebox .md h2 + blockquote
-            {border: 1px solid #48E;}
-
+        .btn-default,.btn-whoaverse-default       {color: #FFF !important; background-color: #48E;} /* Global default */
+            .btn-default:hover,.btn-whoaverse-default:hover               {background-color: #59F;} /* Global default (hover) */
+        .btn-whoaverse-medium                     {color: #FFF !important; background-color: #48E;} /* Global, 'submit' */
+            .btn-whoaverse-medium:hover                                   {background-color: #59F;} /* Global, 'submit' (hover) */
+        .side .btn-whoaverse                      {color: #FFF !important; background-color: #48E;} /* Sidebar, 'share a link' and 'start a discussion' */
+            .side .btn-whoaverse:hover                                    {background-color: #59F;} /* Sidebar, 'share a link' and 'start a discussion' (hover) */
+        .side .btn-whoaverse-paging               {color: #FFF !important; background-color: #48E;} /* Sidebar, 'subscribe' */
+            .side .btn-whoaverse-paging:hover                             {background-color: #59F;} /* Sidebar, 'subscribe' (hover) */
+        .titlebox h5 a                            {color: #FFF !important; background-color: #48E;} /* Sidebar, h5 button */
+            .titlebox h5 a:hover                                          {background-color: #59F;} /* Sidebar, h5 button (hover) */
+        .commentarea .btn-whoaverse-paging        {color: #FFF !important; background-color: #48E;} /* Comment, 'reply' and 'cancel' */
+            .commentarea .btn-whoaverse-paging:hover                      {background-color: #59F;} /* Comment, 'reply' and 'cancel' (hover) */
+        .well .btn-whoaverse                      {color: #FFF !important; background-color: #48E;} /* Submit, 'submit' */
+            .well .btn-whoaverse:hover                                    {background-color: #59F;} /* Submit, 'submit' */
+           
 
     /* Name of subscribers --------------------------------- */
 
         .subscribers .word {visibility: hidden;}
         .subscribers .word:before {
-            content: "subscribers";
+            content: "awesome people";
             visibility: visible
         }
         .users-online .word {visibility: hidden;}
@@ -104,17 +181,14 @@
 /*  Body
     ============================================================================ */
 
-    body {
-        font-family: Arial, sans-serif;
-        color: #444;
-    }
+    body {font-family: Arial, sans-serif;}
 
 
     /* Body formatting ------------------------------------- */
         
         /* Horizontal Rule */
         hr {
-            display: hidden !important;
+            border-style: none;
             margin: 0;
             padding: 0;
         }
@@ -124,17 +198,9 @@
         a {text-decoration: none;}
             a:hover,a:focus {text-decoration: none;}
 
-
-        /* Code */
-        code {
-            color: #555;
-            background-color: #EEE;
-        }
         
         /* Block quote */
         .md blockquote {
-            border: 1px solid #DDD;
-            background-color: #FAFAFA;
             margin: 5px 15px 5px 0;
             border-radius: 0;
             padding: 5px 10px 10px;
@@ -148,8 +214,6 @@
     
         .form-control {
             font-family: Arial, sans-serif;
-            background-color: #FAFAFA;
-            border: 1px solid #DDD;
             border-radius: 0;
         }
     
@@ -165,7 +229,6 @@
             /* Downvote */
             .arrow-downvote {background-position: 0 0;}
                 .arrow-downvoted {background-position: 0 -19px;}
-            
             /* Upvote */
             .arrow-upvote {background-position: -18px 0;}
                 .arrow-upvoted {background-position: -18px -19px;}
@@ -173,15 +236,16 @@
                 
     /* Submission boxes ------------------------------------ */
     
-        .well {
-            margin-top: 26px;
-            border: 1px solid #F0F0F0;
-        }
+        .well {margin-top: 26px;}
 
 
     /* Shadows --------------------------------------------- */
 
-        .side,.link,.commentarea,#header:after,.well,.content form {
+        .side,
+        .link,
+        .commentarea,
+        #header:after,
+        .well,.content form {
             -moz-box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
             -webkit-box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
             box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
@@ -191,7 +255,12 @@
     /* Buttons --------------------------------------------- */
     
         /* Global */
-        .btn-default,.btn-whoaverse,.btn-whoaverse-default,.btn-whoaverse-medium,.btn-whoaverse-paging,.titlebox h5 a {
+        .btn-default,
+        .btn-whoaverse,
+        .btn-whoaverse-default,
+        .btn-whoaverse-medium,
+        .btn-whoaverse-paging,
+        .titlebox h5 a {
             border-radius: 2px;
             border: 0;
             text-shadow: none;
@@ -212,19 +281,12 @@
                 
         /* Submit */
         .btn-whoaverse-medium,.well .btn-whoaverse,.commentarea .btn-whoaverse-paging {
-            background-color: #FAFAFA;
-            border: 1px solid #DDD;
+            border: 0 none;
             font-size: 14px;
-            color: #444 !important;
             -moz-box-shadow: 1px 1px 0 rgba(0,0,0,0.1);
             -webkit-box-shadow: 1px 1px 0 rgba(0,0,0,0.1);
             box-shadow: 1px 1px 0 rgba(0,0,0,0.1);
         }
-            .btn-whoaverse-medium:hover,.well .btn-whoaverse:hover,.commentarea .btn-whoaverse-paging:hover {
-                background-color: #FAFAFA;
-                border-color: #CCC;
-                color: #333 !important;
-            }
         
         /* Comment reply */
         .commentarea .btn-whoaverse-paging {font-size: 12px;}
@@ -307,7 +369,6 @@
             z-index: 1;
             width: 100%;
             height: 50px;
-            border: 1px solid #F0F0F0;
             content: " ";
         }
     
@@ -342,7 +403,6 @@
                     font-size: 18px;
                 }
                 .pagename a {
-                    color: #CCC;
                     font-weight: normal;
                     position: absolute;
                     z-index: 15;
@@ -360,15 +420,14 @@
                     display: block;
                     position: absolute;
                     top: 13px;
-                    margin: 0;
                     right: 0px;
                     left: 260px;
+                    margin: 0;
                     z-index: 6;
                     padding: 0px;
                     height: 24px;
                     background-color: transparent !important;
                     border-bottom: 0px solid;
-                    color: #999;
                     list-style-type: none;
                     vertical-align: bottom;
                     text-align: left;
@@ -393,25 +452,15 @@
                     /* Unselected tabs --------------------- */
                     
                         .tabmenu li a {
-                            color: #AAA;
                             padding: 2px 2px 0 2px;
-                            border-top: 2px solid #FFF;
                             background-color: transparent !important;
                         }
-                            .tabmenu li a:hover {
-                                border-top: 2px solid #AAA;
-                                color: #777;
-                            }
 
                     
                     /* Selected tab ------------------------ */
                     
                         .tabmenu li.selected {border: 0;}
-                            .tabmenu li.selected a {
-                                border: 0 !important;
-                                color: #555;
-                            }
-                                .tabmenu li.selected a:hover {color: #333;}
+                            .tabmenu li.selected a {border: 0 !important;}
         
 
         /* Right (account information) --------------------- */
@@ -442,10 +491,9 @@
     ============================================================================ */
 
     .side {
-        margin: 60px 10px 0 00;
+        margin: 60px 10px 0 0;
         padding: 10px;
         width: 300px;
-        border: 1px solid #F0F0F0;
     }
 
 
@@ -455,10 +503,14 @@
             margin: 0 -10px;
             border-radius: 0;
             width: 298px;
-            border-left: 0;
-            border-right: 0;
+            border-style: solid none;
             text-align: center;
         }
+            .side .form-control:focus {
+                box-shadow: inset 0 2px 0 rgba(0,0,0,0.2);
+                -moz-box-shadow: inset 0 2px 0 rgba(0,0,0,0.2);
+                -webkit-box-shadow: inset 0 2px 0 rgba(0,0,0,0.2);
+            }
     
     
     /* Headings -------------------------------------------- */
@@ -474,7 +526,6 @@
                     text-align: center;
                     font-size: 16px !important;
                     padding: 5px 0;
-                    color: #FFF !important;
                     margin-top: 15px;
                     font-family: "Segoe UI", Calibri, Ubuntu, Arial, sans-serif;
                 }
@@ -490,7 +541,7 @@
                     -moz-box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
                     -webkit-box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
                     box-shadow: 0 3px 0 rgba(0,0,0,0.1);
-                    background-color: #FFF;
+                    background-color: transparent;
                     padding-top: 0;
                 }
 
@@ -506,7 +557,6 @@
                 line-height: 30px;
                 margin: 10px 0;
                 text-decoration: none;
-                color: #fff;
                 cursor: pointer;
                 padding: 0;
             }
@@ -517,9 +567,8 @@
             .submissioninfo {border: 0;}
             
             .titlebox.submissioninfo h2 {
-                color: #444;
                 border: 0 !important;
-                font-weight: bold;
+                font-weight: italic;
                 font-size: 14px;
             }
             
@@ -531,7 +580,6 @@
             .titlebox h1 a,.titlebox h1 {
                 margin: 0;
                 margin-bottom: 10px;
-                color: #333;
                 border: 0;
                 text-transform: lowercase;
                 font-style: normal;
@@ -550,12 +598,12 @@
         
         /* Moderators, Administration tools ... ------------ */
         
-        .side .title {border-bottom: 1px dotted gray;}
+        
             .side .title h1 {text-transform: lowercase;}
             
             /* List box */
             .sidecontentbox .content {border: 0;}
-                .sidecontentbox .content a {color: #666;}
+                .icon-menu a {background-color: transparent;}
 
 
 
@@ -571,8 +619,10 @@
             padding: 10px 0;
             margin: 0 320px 10px 0;
             font-size: 10px;
-            border: 1px solid #F0F0F0;
         }
+
+            /* Thumbnail */
+            .thumbnail {background-color: transparent;}
 
             /* Post titles */
             .link .title.may-blank {
@@ -582,18 +632,13 @@
                 .link .title a:hover {text-decoration: underline;}
             
             /* Post link domain */
-            .domain {color: #FFF;}
             .domain a {
-                color: #AAA;
                 text-decoration: none !important;
                 font-weight: bold;
             }
             
             /* Post tag line */
-            .tagline {
-                font-size: 12px;
-                color: #AAA
-            }
+            .tagline {font-size: 12px;}
                 .link .tagline a {text-decoration: none !important;}
                 .link .tagline .commentvotesratio {opacity: 0;}
                     .link:hover .tagline .commentvotesratio {opacity: 1;}
@@ -603,14 +648,6 @@
             .link .entry .flat-list.buttons li a {opacity: 0;}
             .link:hover .entry .flat-list.buttons li a {opacity: 1;}
                 .link .entry .flat-list.buttons li .comments {opacity: 1 !important;}
-        
-        
-        /* Vote score -------------------------------------- */
-        
-            	.link .score {color:#666;}
-
-                    .link .score.likes {color: #D64;}	
-                    .link .score.dislikes {color: #58D;}
         
         
         /* Expando button ---------------------------------- */
@@ -637,8 +674,6 @@
     ============================================================================ */
 
     .link .usertext .md {
-        background-color: #FAFAFA;
-        border: 1px solid #DDD;
         border-radius: 0;
         margin-right: 10px;
     }
@@ -647,23 +682,16 @@
     /* Heading formatting ---------------------------------- */
 
         /* Heading 1 */
-        .usertext .md h1,
-            .commentarea .md h1 {
-            border-bottom: 1px dotted gray;
-            font-size: 150%;
-        }
+        .usertext .md h1,.commentarea .md h1 {font-size: 150%;}
         
         /* Heading 2 */
-        .usertext .md h2,
-            .commentarea .md h2 {
-            color: #555;
+        .usertext .md h2,.commentarea .md h2 {
             font-size: 135%;
             font-weight: bold;
         }
         
         /* Heading 3 */
-        .usertext .md h3,
-            .commentarea .md h3 {font-size: 120%;}
+        .usertext .md h3,.commentarea .md h3 {font-size: 120%;}
 
 
     /* Comments -------------------------------------------- */
@@ -673,18 +701,18 @@
             margin-right: 320px;
             margin-top: -1px;
             padding: 10px;
-            border: 1px solid #F0F0F0;
             border-top: 0;
         }
 
-        /* Expand button */
-        .comment .expand {color: #BBB;}
-        
         /* Reply form */
+        .commenttextarea,.form-control {
+            border-radius: 0;
+            font-family: Arial, sans-serif;
+        }
+
         .content form {
             margin: 0 320px -3px 0;
             padding: 10px;
-            border: 1px solid #F0F0F0;
             border-bottom: 0;
         }
             .content form hr {border: 0;}
@@ -697,6 +725,8 @@
                 background-color: transparent;
                 border: 0;
             }
+
+        .label-default {background-color: transparent;}
             
         /* Single comments */
         .comment .child, .comment .showreplies {
@@ -705,10 +735,20 @@
         }
         .comment {padding: 5px 8px 5px 5px !important}
 
-        /* Alternating comment styles */
-        .comment .comment {border: 1px solid #DDD;}
-        .comment .comment,.comment .comment .comment .comment,.comment .comment .comment .comment .comment .comment,.comment .comment .comment .comment .comment .comment .comment .comment {background-color: #FAFAFA;}
-        .comment .comment .comment,.comment .comment .comment .comment .comment,.comment .comment .comment .comment .comment .comment .comment,.comment .comment .comment .comment .comment .comment .comment .comment .comment {background-color: #FFF;}
+
+
+/* Submit link page ---------------------------------------- */
+
+    .alert-info,.info th,thead>tr>td.info,
+    .table>tbody>tr>td.info,.table>tfoot>tr>td.info,
+    .table>thead>tr>th.info,.table>tbody>tr>th.info,
+    .table>tfoot>tr>th.info,.table>thead>tr.info>td,
+    .table>tbody>tr.info>td,.table>tfoot>tr.info>td,
+    .table>thead>tr.info>th,.table>tbody>tr.info>th,
+    .table>tfoot>tr.info>th {
+        border: 0;
+        border-radius: 0;
+    }
 
 
 
