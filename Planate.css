@@ -52,14 +52,15 @@
         .table>thead>tr.info>th,.table>tbody>tr.info>th,
         .table>tfoot>tr.info>th                                                             {background-color: #48E;} /* Submit link table, information table */
         .table-striped > tbody > tr:nth-child(2n+1) > td,
-        .table-striped > tbody > tr:nth-child(2n+1) > th                                 {background-color: #FAFAFA;} /* Submit link table, odd rows */
+        .table-striped > tbody > tr:nth-child(2n+1) > th                      {background-color: #FAFAFA !important;} /* Submit link table, odd rows */
 
 
     /* Border colors --------------------------------------- */
 
         .md blockquote                {border: 1px solid #DDD;} /* Global block quote */
         pre                           {border: 1px solid #CCC;} /* Global code */
-        .form-control                 {border: 1px solid #DDD;} /* Global text box */
+        .form-control,
+        .form-control:focus        {border: 1px solid #FAFAFA;} /* Global text box */
         #header:after              {border: 1px solid #F0F0F0;} /* Header, main */
         .tabmenu li a      {border-top: 2px solid transparent;} /* Header tab menu, unselected */
         .tabmenu li a:hover       {border-top: 2px solid #AAA;} /* Header tab menu, unselected (hover) */
@@ -74,7 +75,6 @@
         .commentarea               {border: 1px solid #F0F0F0;} /* Comment */
         .content form              {border: 1px solid #F0F0F0;} /* Comment form area */
         .commenttextarea,
-        .form-control              {border: 1px solid #FAFAFA;} /* Comment form */
         .comment .comment             {border: 1px solid #DDD;} /* Comment thread, alternating design */
         .well                      {border: 1px solid #F0F0F0;} /* Submit box */
         .panel                        {border: 1px solid #EEE;} /* Submit link table */
@@ -216,6 +216,7 @@
             font-family: Arial, sans-serif;
             border-radius: 0;
         }
+            .form-control:focus {box-shadow: none;}
     
     
     /* Voting arrows --------------------------------------- */
@@ -763,3 +764,30 @@
     }
     
     .footer {border: 0;}
+
+
+
+/*  Mobile
+    ============================================================================ */
+
+    @media (max-width: 800px) and (min-width: 100px) {
+
+        #header .tabmenu {top: 63px; left: 10px; padding-left: 0;}
+        .tabmenu li {font-size: 14px;}
+        #header-bottom-right {margin-right: 10px; top: 195px;}
+        #header:after {height: 100px;}
+        .side {display: none;}
+
+        .link,.commentarea,.content form {margin-right: 10px;}
+        .content {margin-top: 83px;}
+        .link .title.may-blank {font-size: 14px;}
+
+        #sr-header-area,
+        #sr-more-link,
+        #header-bottom-right,
+        .link .tagline .commentvotesratio,
+        .link .entry .flat-list.buttons li a {opacity: 1 !important;}
+
+        .comment .child, .comment .showreplies {padding-left: 10px !important;}
+
+    }
