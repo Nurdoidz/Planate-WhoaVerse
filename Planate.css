@@ -843,6 +843,7 @@
 
         /* Text */
         .tabmenu li a,
+        .tabmenu li.selected a,
         .pagename a,
         #header-bottom-right:hover .user,
         .titlebox h1 a,
