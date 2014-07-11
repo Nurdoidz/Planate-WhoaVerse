@@ -730,7 +730,7 @@
         .link .title.may-blank:hover,                                         /* Link title (hover) */
         .link .entry .flat-list.buttons li .comments:hover,                   /* Link 'comments' (hover) */
         .side a:hover                                          {color: #59F;} /* Sidebar (hover) */
-        #sr-header-area a:hover                             {color: #6BA6FF;} /* Header > top bar (hover) */
+        #sr-header-area a:hover,#sr-header-area .selected a {color: #6BA6FF;} /* Header > top bar (hover) */
         .pagename a                                            {color: #555;} /* Header > subverse name */
             .pagename a:hover                                  {color: #48E;} /* Header > subverse name (hover) */
         .tabmenu li.selected a                                 {color: #555;} /* Header tab menu > selected */
