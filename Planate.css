@@ -525,6 +525,8 @@
     }
 
     .link .usertext .md a:hover {text-decoration: underline;}
+
+    .md {font-size: 14px;}
     
 
     /* Heading formatting
