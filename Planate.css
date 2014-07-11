@@ -3,7 +3,7 @@
             
             Planate theme stylesheet for WhoaVerse subverses
             By Nurdoidz
-            Version 1.3 (Last modified: 2014-07-10)
+            Version 1.4 (Last modified: 2014-07-11)
             For more information, go to http://whoaverse.com/v/Planate.
             
             For custom styling documentation, visit
@@ -42,6 +42,10 @@
             -webkit-box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
             box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
         }
+
+        /* Code */
+        code,pre {border: 1px solid;}
+        pre code {border: 0;}
     
     
     /* Text boxes
@@ -152,9 +156,10 @@
             border: 1px solid #444 !important;
             opacity: 0.5;
         }
+        #sr-more-link {top: 17px;}
             
         /* Hover effect */
-        #sr-header-area:hover,#sr-more-link:hover,.whoaSubscriptionMenu ul:hover {opacity: 1;}
+        #sr-header-area:hover,#sr-header-area:hover #sr-more-link,.whoaSubscriptionMenu ul:hover {opacity: 1;}
         
         /* Links */
         #sr-header-area,#sr-header-area a,#sr-more-link {color: #EEE;}
@@ -540,6 +545,13 @@
         /* Heading 3 */
         .usertext .md h3,.commentarea .md h3 {font-size: 120%;}
 
+        /* Table */
+        .md table {
+            border: 2px solid;
+            box-shadow: none;
+        }
+        .md td,.md th {border: 2px solid;}
+
 
     /* Comments
     ---------------------------------------------------------------------------- */
@@ -640,73 +652,74 @@
     /* Background colors
     ---------------------------------------------------------------------------- */
 
-        body                                                                             {background-color: #EEE;} /* Body */
-        .md blockquote,pre                                                            {background-color: #FAFAFA;} /* Block quote, code */
-        .commenttextarea,.form-control                                                   {background-color: #FFF;} /* Text box, search */
-        #header:after,                                                                                             /* Header bar */
-        .side,                                                                                                     /* Sidebar */
-        .link,                                                                                                     /* Links */
-        .commentarea,.content form,                                                                                /* Comments */
+        body                                                                                {background-color: #EEE;} /* Body */
+        .md blockquote,pre,code                                                          {background-color: #FAFAFA;} /* Block quote, code */
+        .commenttextarea,.form-control                                                      {background-color: #FFF;} /* Text box, search */
+        .md table                                                                    {background-color: transparent;} /* Table */
+        .md th                                                                              {background-color: #EEE;} /* Table header */
+        #header:after,                                                                                                /* Header bar */
+        .side,                                                                                                        /* Sidebar */
+        .link,                                                                                                        /* Links */
+        .commentarea,.content form,                                                                                   /* Comments */
         .comment .comment .comment,
         .comment .comment .comment .comment .comment,
         .comment .comment .comment .comment .comment .comment .comment,
-        .comment .comment .comment .comment .comment .comment .comment .comment .comment {background-color: #FFF;} /* Odd child comments */
-        .link .usertext .md                                                           {background-color: #FAFAFA;} /* Link > self text */
-        .titlebox .md h2                                                                 {background-color: #48E;} /* Sidebar > special heading */
+        .comment .comment .comment .comment .comment .comment .comment .comment .comment    {background-color: #FFF;} /* Odd child comments */
+        .link .usertext .md                                                              {background-color: #FAFAFA;} /* Link > self text */
+        .titlebox .md h2                                                                    {background-color: #48E;} /* Sidebar > special heading */
         .comment .comment,
         .comment .comment .comment .comment,
         .comment .comment .comment .comment .comment .comment,
-        .comment .comment .comment .comment .comment .comment .comment .comment       {background-color: #FCFCFC;} /* Comment thread > even child comments */
-        .well,.panel                                                                     {background-color: #FFF;} /* Submit link form > submit link table */
-        .panel-default > .panel-heading                                                  {background-color: #48E;} /* Submit link table > title bar */
+        .comment .comment .comment .comment .comment .comment .comment .comment          {background-color: #FCFCFC;} /* Comment thread > even child comments */
+        .well,.panel                                                                        {background-color: #FFF;} /* Submit link form > submit link table */
+        .panel-default > .panel-heading                                                     {background-color: #48E;} /* Submit link table > title bar */
         .alert-info,.info th,thead>tr>td.info,
         .table>tbody>tr>td.info,.table>tfoot>tr>td.info,
         .table>thead>tr>th.info,.table>tbody>tr>th.info,
         .table>tfoot>tr>th.info,.table>thead>tr.info>td,
         .table>tbody>tr.info>td,.table>tfoot>tr.info>td,
         .table>thead>tr.info>th,.table>tbody>tr.info>th,
-        .table>tfoot>tr.info>th                                                          {background-color: #48E;} /* Submit link table > information table */
+        .table>tfoot>tr.info>th                                                             {background-color: #48E;} /* Submit link table > information table */
         .table-striped > tbody > tr:nth-child(2n+1) > td,
-        .table-striped > tbody > tr:nth-child(2n+1) > th                   {background-color: #FAFAFA !important;} /* Submit link table > odd rows */
+        .table-striped > tbody > tr:nth-child(2n+1) > th                      {background-color: #FAFAFA !important;} /* Submit link table > odd rows */
 
 
     /* Border colors
     ---------------------------------------------------------------------------- */
 
-        .md blockquote,                                     /* Block quote */
-        pre,                                                /* Code */
-        .link .usertext .md,                                /* Link > self text */
-        .comment .comment             {border-color: #DDD;} /* Comment thread > child */
-        #header:after,                                      /* Header bar */
-        .link,                                              /* Link */
-        .side,                                              /* Sidebar */
-        .side .form-control,                                /* Search */
-        .commentarea,                                       /* Comment area */
-        .content form,.well        {border-color: #F0F0F0;} /* Submit box */
-        .tabmenu li a          {border-color: transparent;} /* Header tab menu > unselected */
-        .tabmenu li a:hover           {border-color: #AAA;} /* Header tab menu > unselected (hover) */
+        .md blockquote,                                        /* Block quote */
+        pre,code,                                              /* Code */
+        .md table,.md th,.md td          {border-color: #EEE;} /* Table */
+        .link .usertext .md,                                   /* Link > self text */
+        .comment .comment                {border-color: #DDD;} /* Comment thread > child */
+        #header:after,                                         /* Header bar */
+        .link,                                                 /* Link */
+        .side,                                                 /* Sidebar */
+        .side .form-control,                                   /* Search */
+        .commentarea,                                          /* Comment area */
+        .content form,.well           {border-color: #F0F0F0;} /* Submit box */
+        .tabmenu li a             {border-color: transparent;} /* Header tab menu > unselected */
+            .tabmenu li a:hover          {border-color: #AAA;} /* Header tab menu > unselected (hover) */
         .usertext .md h1,
-        .commentarea .md h1           {border-color: gray;} /* Link > self text/comment heading */
-        .titlebox .md h2 + blockquote {border-color: #DDD;} /* Sidebar > special heading */
+        .commentarea .md h1              {border-color: gray;} /* Link > self text/comment heading */
+        .titlebox .md h2 + blockquote    {border-color: #DDD;} /* Sidebar > special heading */
         .commenttextarea:focus,
-        .form-control:focus           {border-color: #CCC;} /* Text box (focused) */
+        .form-control:focus              {border-color: #CCC;} /* Text box (focused) */
+        .side .form-control:focus        {border-color: #CCC;} /* Search */
         .commenttextarea,
-        .panel,.form-control          {border-color: #EEE;} /* Submit link table */
+        .panel,.form-control             {border-color: #EEE;} /* Submit link table */
   
 
     /* Hyperlink colors
     ---------------------------------------------------------------------------- */
 
-        /* Colored */
         a,                                                                    /* Default */
-        .pagename a:hover,                                                    /* Header subverse name (hover) */
         #header-bottom-right a:hover,                                         /* Header > right (hover) */
         .link a,                                                              /* Link */
         .link .title.may-blank,                                               /* Link title */
         .domain a:hover,                                                      /* Link domain (hover) */
         .link .entry .flat-list.buttons li .comments,                         /* Link 'comments' */
         .side a,                                                              /* Sidebar */
-        .titlebox h1 a:hover,                                                 /* Sidebar subverse name (hover) */
         .sidecontentbox .content a:hover,                                     /* Sidebar moderators list (hover) */
         .comment .expand:hover,                                               /* Comment > expand/collapse (hover) */
         .tagline a                                             {color: #48E;} /* Comment tagline */
@@ -717,26 +730,31 @@
         .side a:hover                                          {color: #59F;} /* Sidebar (hover) */
         #sr-header-area a:hover                             {color: #6BA6FF;} /* Header > top bar (hover) */
         .pagename a                                            {color: #555;} /* Header > subverse name */
+            .pagename a:hover                                  {color: #48E;} /* Header > subverse name (hover) */
         .tabmenu li.selected a                                 {color: #555;} /* Header tab menu > selected */
-        .tabmenu li.selected a:hover                           {color: #333;} /* Header tab menu > selected (hover) */
+            .tabmenu li.selected a:hover                       {color: #333;} /* Header tab menu > selected (hover) */
         .tabmenu li a                                          {color: #AAA;} /* Header tab menu > unselected */
             .tabmenu li a:hover                                {color: #777;} /* Header tab menu > unselected (hover) */
         .domain a                                              {color: #AAA;} /* Link domain */
         .titlebox h1,.titlebox h1 a                            {color: #555;} /* Sidebar subverse name */
+        .titlebox h1 a:hover                                   {color: #48E;} /* Sidebar subverse name (hover) */
         .titlebox h5 a,.titlebox h5 a:hover,
         .sidecontentbox a.helplink                             {color: #FFF;} /* Sidebar > custom h5 button */
         .sidecontentbox .content a                             {color: #666;} /* Sidebar moderators list */
         .tagline .moderator                                 {color: #22AA20;} /* Comment > 'mod' */
         .tagline .submitter                                 {color: #3A6FBD;} /* Comment > 'submitter' */
-        .panel-title a,.panel-title a:hover                    {color: #fff;} /* Submit > a */
+        .entry .buttons li a                                   {color: #777;} /* Comment > bottom buttons */
+        .panel-title a,.panel-title a:hover                    {color: #FFF;} /* Submit > a */
 
 
     /* Text colors
     ---------------------------------------------------------------------------- */
 
         body                                     {color: #333;} /* Default */
-        pre                                      {color: #333;} /* Code */
+        pre,code                                 {color: #333;} /* Code */
         .user                                    {color: #111;} /* User points */
+        .md th                                   {color: #333;} /* Table header */
+        .md td                                   {color: #333;} /* Table cell */
         .side                                    {color: #444;} /* Sidebar */
         .side .form-control                      {color: #444;} /* Sidebar search box (user) */
         .side .form-control::-moz-placeholder    {color: #444;} /* Sidebar search box (unfocused) */
@@ -769,6 +787,7 @@
 
         .btn-default,.btn-whoaverse-default,                                                        /* Default */
         .btn-whoaverse-medium,                                                                      /* Default > 'submit' */
+        .pagination-container .btn-whoaverse-paging a,                                              /* Link > 'next page' */
         .side .btn-whoaverse,                                                                       /* Sidebar > 'share a link' and 'start a discussion' */
         .side .btn-whoaverse-paging,                                                                /* Sidebar > 'subscribe' */
         .titlebox h5 a,.sidecontentbox a.helplink,                                                  /* Sidebar > h5 button */
@@ -776,9 +795,10 @@
         .well .btn-whoaverse                      {color: #FFF !important; background-color: #48E;} /* Submit > 'submit' */
         .btn-default:hover,.btn-whoaverse-default:hover,                                            /* Default (hover) */
         .btn-whoaverse-medium:hover,                                                                /* Default > 'submit' (hover) */
+        .pagination-container .btn-whoaverse-paging a:hover,                                        /* Link > 'next page' (hover) */
         .side .btn-whoaverse:hover,                                                                 /* Sidebar > 'share a link' and 'start a discussion' (hover) */
         .side .btn-whoaverse-paging:hover,                                                          /* Sidebar > 'subscribe' (hover) */
-        .titlebox h5 a:hover,.sidecontentbox a.helplink:hover,                                            /* Sidebar > h5 button (hover) */
+        .titlebox h5 a:hover,.sidecontentbox a.helplink:hover,                                      /* Sidebar > h5 button (hover) */
         .commentarea .btn-whoaverse-paging:hover,                                                   /* Comment > 'reply' and 'cancel' (hover) */
         .well .btn-whoaverse:hover                                        {background-color: #59F;} /* Submit > 'submit' */
     
@@ -802,7 +822,8 @@
 /*  Transitions
     ============================================================================ */
 
-    /* Opacity --------------------------------------------- */
+    /* Opacity
+    ---------------------------------------------------------------------------- */
     
         .tagline .commentvotesratio,
         .link:hover .entry li a,
@@ -815,8 +836,9 @@
         }
     
     
-    /* Color ----------------------------------------------- */
-    
+    /* Color
+    ---------------------------------------------------------------------------- */
+
         /* Text */
         .tabmenu li a,
         .pagename a,
@@ -844,22 +866,39 @@
 
     @media (max-width: 800px) and (min-width: 100px) {
 
-        #header .tabmenu {top: 63px; left: 10px; padding-left: 0;}
-        .tabmenu li {font-size: 14px;}
-        #header-bottom-right {margin-right: 10px; top: 197px;}
+        /* Header -------------------------------------------------------------- */
         #header:after {height: 100px;}
+
+            /* Left ------------------------------------------------------------ */
+            .pagename a {top: 27px;}
+            #header .tabmenu {top: 63px; left: 10px; padding-left: 0;}
+                .tabmenu li {font-size: 16px;}
+
+            /* Right ----------------------------------------------------------- */
+            #header-bottom-right {margin-right: 10px; top: 155px;}
+
+        /* Sidebar ------------------------------------------------------------- */
         .side {display: none;}
 
+        /* Post feed ----------------------------------------------------------- */
         .link,.commentarea,.content form {margin-right: 10px;}
-        .content {margin-top: 83px;}
         .link .title.may-blank {font-size: 14px;}
+        .link .flat-list {font-size: 12px;}
 
+        /* Comments ------------------------------------------------------------ */
+        .commentarea .flat-list.buttons {font-size: 12px;}
+        .content {margin-top: 83px;}
+        .comment .child, .comment .showreplies {padding-left: 10px !important;}
+
+        /* Transitions --------------------------------------------------------- */
         #sr-header-area,
         #sr-more-link,
         #header-bottom-right,
         .link .tagline .commentvotesratio,
         .link .entry .flat-list.buttons li a {opacity: 1 !important;}
 
-        .comment .child, .comment .showreplies {padding-left: 10px !important;}
-
+        /* Footer -------------------------------------------------------------- */
+        .footer,.footer a {font-size: 14px;}
     }
+
+
