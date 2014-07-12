@@ -873,6 +873,7 @@
         #header:after {height: 100px;}
 
             /* Left ------------------------------------------------------------ */
+            .pagename {display: block !important;}
             .pagename a {top: 27px;}
             #header .tabmenu {top: 63px; left: 10px; padding-left: 0;}
                 .tabmenu li {font-size: 16px;}
