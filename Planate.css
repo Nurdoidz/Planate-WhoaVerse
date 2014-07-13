@@ -358,7 +358,7 @@
                     text-align: center;
                 }
 
-                .titlebox .md ul {
+                .titlebox .md ul,.titlebox .md ol {
                     margin-left: 20px;
                     margin-right: 10px;
                 }
