@@ -18,6 +18,8 @@ If you have any questions or concerns, [head over to /v/Planate](http://whoavers
 
 # Documentation
 
+**WARNING! This documentation is outdated! It will be updated momentarily.**
+
 ## Introduction
 
 This documentation explains how to use the CSS code to customize it for a subverse. It is organized with customization in mind for end-users without headaches. If only color customization is desired, skip to 'Theme Colors and Customization.'
