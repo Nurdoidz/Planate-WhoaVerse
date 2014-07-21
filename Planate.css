@@ -30,6 +30,7 @@
     .md blockquote {
         background:         #FAFAFA;
         border:             1px solid #EEE;
+        color:              inherit;
         margin:             5px 15px 5px 0;
         padding:            5px 10px 10px;
         -webkit-box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
@@ -38,7 +39,7 @@
     }
 
 
-    pre code {border: #000;}
+    pre code {border: 0;}
 
     code,pre {
         background: #FAFAFA;
@@ -48,9 +49,10 @@
     }
 
 
-    #header-bottom-left,.side,.link,.commentarea,.menuarea,.well {
-        -webkit-box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
-        box-shadow:         3px 3px 0 rgba(0,0,0,0.1);
+    #header-bottom-left,.side,.link,.commentarea,.menuarea,.well,
+    .titlebox .md h6 + blockquote {
+        -webkit-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+        box-shadow:         0 3px 0 rgba(0,0,0,0.1);
     }
 
 
@@ -75,23 +77,23 @@
             padding:               6px;
             text-shadow:           none;
             text-decoration:       none !important;
-            -webkit-box-shadow:    inset -2px -2px 0 rgba(0,0,0,0.2);
-            box-shadow:            inset -2px -2px 0 rgba(0,0,0,0.2);
+            -webkit-box-shadow:    inset 0 -3px 0 rgba(0,0,0,0.2);
+            box-shadow:            inset 0 -3px 0 rgba(0,0,0,0.2);
         }
 
 
         .btn-default,.btn-whoaverse-default,.btn-whoaverse-medium,                                                                     
         .pagination-container .btn-whoaverse-paging a,.side .btn-whoaverse,                                                                      
-        .side .btn-whoaverse-paging,.titlebox h5 a,.sidecontentbox a.helplink,                                                 
-        .commentarea .btn-whoaverse-paging,.well .btn-whoaverse
+        .btn-whoaverse-paging,.titlebox h5 a,.sidecontentbox a.helplink,                                                 
+        .btn-whoaverse-paging,.well .btn-whoaverse
         {color: #FFF !important; background: #48E;}
 
         .btn-default:hover,.btn-whoaverse-default:hover,                                           
         .btn-whoaverse-medium:hover,                                                               
         .pagination-container .btn-whoaverse-paging a:hover,                                       
-        .side .btn-whoaverse:hover,.side .btn-whoaverse-paging:hover,                                                         
-        .titlebox h5 a:hover,.sidecontentbox a.helplink:hover,                                     
-        .commentarea .btn-whoaverse-paging:hover,.well .btn-whoaverse:hover
+        .side .btn-whoaverse:hover,.titlebox h5 a:hover,
+        .sidecontentbox a.helplink:hover,.btn-whoaverse-paging:hover,
+        .well .btn-whoaverse:hover
         {background: #59F;}
 
 
@@ -336,7 +338,7 @@
         ------------------------------------------------------------------------ */
 
             .titlebox .btn-whoaverse-paging {
-                font-size: 100%;
+                font-size: 80%;
                 padding:   3px 6px;
             }
 
@@ -373,14 +375,11 @@
                 margin:      15px 0 0;
                 padding:     5px 0;
                 text-align:  center;
-                font-weight: bold;
             }
 
             .titlebox .md h6 + blockquote {
                 background:         none;
                 border:             1px solid #DDD;
-                -webkit-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
-                box-shadow:         0 3px 0 rgba(0,0,0,0.1);
                 margin:             0;
                 padding:            0 10px 10px;
             }
@@ -395,18 +394,18 @@
             .titlebox .md h5 a,.sidecontentbox a.helplink {
                 display:     block;
                 height:      30px;
-                width:       100%;
-                text-align:  center;
                 line-height: 15px;
                 margin:      10px 0;
+                text-align:  center;
+                width:       100%;
             }
 
 
             .titlebox .bottom {
-                margin:       10px 0 20px;
-                border-style: solid none none;
                 border-color: #DDD;
+                border-style: solid none none;
                 color:        #555;
+                margin:       10px 0 20px;
                 padding:      5px 0;
             }
 
@@ -441,10 +440,10 @@
     ---------------------------------------------------------------------------- */
 
         .link {
-            background: #FFF;
-            border:     1px solid #F0F0F0;
-            margin:     0 0 10px;
-            padding:    10px;
+            background:          #FFF;
+            border:              1px solid #F0F0F0;
+            margin:              0 0 10px;
+            padding:             10px;
         }
 
         .link a {color: #48E;}
@@ -476,7 +475,7 @@
 
             .link .title.may-blank {
                 color:     #48E;
-                font-size: 120%;
+                font-size: 105%;
             }
             .link .title.may-blank:hover {color: #59F;}
 
@@ -500,7 +499,11 @@
             }
 
             .link:hover .tagline {color: #555;}
-            .link .tagline .commentvotesratio {opacity: 0;}
+            .link .tagline .commentvotesratio {
+                color:       transparent;
+                font-weight: bold;
+                opacity:     0;
+            }
             .link:hover .tagline .commentvotesratio {opacity: 1;}
 
 
@@ -511,6 +514,12 @@
 
         /* ! Link list link flat list
         ------------------------------------------------------------------------ */
+
+            .link .entry .flat-list {
+                font-size: 120%;
+                padding: 0;
+            }
+
 
             .link .entry .flat-list.buttons li a {opacity: 0;}
             .link:hover .entry .flat-list.buttons li a {opacity: 1;}
@@ -526,8 +535,8 @@
         ------------------------------------------------------------------------ */
 
             .expando-button {
-                height: 26px;
-                width:  26px;
+                height: 12px;
+                width:  12px;
             }
 
             /* Expanded buttons commented for the future. */
@@ -536,13 +545,13 @@
             .expando-button.selftext.collapsed:hover
             /*.expando-button.selftext.expanded,
             .expando-button.selftext.expanded:hover*/ {
-                background: url(http://i.imgur.com/BDutAqr.png);
-                height:     26px;
-                width:      26px;
+                background: url(http://i.imgur.com/56QAkuI.png);
+                height:     12px;
+                width:      12px;
             }
 
             .expando-button.selftext.collapsed {background-position: -36px 0;}
-            .expando-button.selftext.collapsed:hover {background-position: -36px -26px;}
+            .expando-button.selftext.collapsed:hover {background-position: -36px -12px;}
             /*.expando-button.selftext.expanded {background-position: -62px 0;}
             .expando-button.selftext.expanded:hover {background-position: -62px -26px;}*/
 
@@ -657,6 +666,7 @@
 
 
         .comment .tagline {font-size: 120%;}
+        .comment .score {font-size: inherit;}
         .tagline .moderator {color: #22AA20;}
         .tagline .submitter {color: #3A6FBD;}
 
@@ -667,13 +677,7 @@
         .commentarea .md {font-size: 110%;}
 
 
-        .comment .btn-whoaverse-paging,.link .btn-whoaverse-paging:hover {
-            background: #48E;
-            color:      #FFF;
-            font-size:  100%;
-        }
-
-        .link .btn-whoaverse-paging:hover {background: #59F;}
+        .comment .btn-whoaverse-paging,.link .btn-whoaverse-paging {font-size:  100%;}
 
 
 
@@ -738,7 +742,7 @@
                 font-size: 130%;
             }
 
-            .table > thead > tr.info > th {background-color: transparent;}
+            .table > thead > tr.info > th {background: none;}
             .table-striped > tbody > tr:nth-child(2n+1) > td {
                 background: none;
                 border: 0;
@@ -767,7 +771,10 @@
     }
 
 
-    .footer {border: 0;}
+    .footer {
+        border: 0;
+        color: #777;
+    }
 
 
 
@@ -818,7 +825,78 @@
 /* ! Customization
 ================================================================================ */
 
-    /* Todo */
+    /* ! Customize backgrounds
+    ---------------------------------------------------------------------------- */
+
+        /*body                           {background: #EEE;}*/ /* Body */
+        /*.md blockquote              {background: #FAFAFA;}*/ /* Block quote */
+        /*code,pre                    {background: #FAFAFA;}*/ /* Code block */
+        /*#header-bottom-left            {background: #FFF;}*/ /* Header left */
+        /*.side                          {background: #FFF;}*/ /* Sidebar */
+        /*.titlebox .md h6               {background: #48E;}*/ /* Sidebar custom heading */
+        /*.link                          {background: #FFF;}*/ /* Link list link */
+        /*.link .usertext .md         {background: #FAFAFA;}*/ /* Link page user text */
+        /*.commenttextarea               {background: #FFF;}*/ /* Link page reply form */
+        /*.menuarea                      {background: #FFF;}*/ /* Link page comments 'sort by' */
+        /*.commentarea                   {background: #FFF;}*/ /* Link page comments area */
+        /*.commentarea .child.comment {background: #FCFCFC;}*/ /* Link page child comments */
+        /*.well                          {background: #FFF;}*/ /* Submission page */
+        /*.well .form-control            {background: #FFF;}*/ /* Submission page forms */
+        
+
+    /* ! Customize border colors
+    ---------------------------------------------------------------------------- */
+
+        /*.md blockquote                  {border-color: #EEE;}*/ /* Block quote */
+        /*code,pre                        {border-color: #DDD;}*/ /* Code block */
+        /*#header-bottom-left          {border-color: #F0F0F0;}*/ /* Header left */
+        /*.tabmenu li a:hover             {border-color: #AAA;}*/ /* Header tab menu unselected (hover) */
+        /*.side                        {border-color: #F0F0F0;}*/ /* Sidebar */
+        /*.side .form-control          {border-color: #F0F0F0;}*/ /* Sidebar search */
+        /*.side .form-control:focus       {border-color: #CCC;}*/ /* Sidebar search (focus) */
+        /*.titlebox .md h6 + blockquote   {border-color: #DDD;}*/ /* Sidebar custom heading box */
+        /*.titlebox .bottom               {border-color: #DDD;}*/ /* Sidebar titlebox description bottom */
+        /*.link                        {border-color: #F0F0F0;}*/ /* Link list link */
+        /*.link .usertext .md             {border-color: #DDD;}*/ /* Link page user text */
+        /*.md h1                          {border-color: #AAA;}*/ /* Link page markup : heading 1 */
+        /*.md table                       {border-color: #CCC;}*/ /* Link page markup : table */
+        /*.md td,.md th                   {border-color: #CCC;}*/ /* Link page markup : table cells */
+        /*.commenttextarea                {border-color: #CCC;}*/ /* Link page reply form */
+        /*.commenttextarea:focus          {border-color: #AAA;}*/ /* Link page reply form (focus) */
+        /*.menuarea                    {border-color: #F0F0F0;}*/ /* Link page comments 'sort by' */
+        /*.commentarea                 {border-color: #F0F0F0;}*/ /* Link page comments area */
+        /*.commentarea .child.comment  {border-color: #FCFCFC;}*/ /* Link page child comments */
+        /*.well                        {border-color: #F0F0F0;}*/ /* Submission page */
+        /*.well .alert                    {border-color: #AAA;}*/ /* Submission page alert */
+        /*.panel-default > .panel-heading {border-color: #AAA;}*/ /* Submission page panel heading */
+        /*tr.info                         {border-color: #AAA;}*/ /* Submission page panel table header */
+        /*.well .form-control             {border-color: #CCC;}*/ /* Submission page forms */
+        /*.well .form-control:focus       {border-color: #AAA;}*/ /* Submission page forms (focus) */
+
+
+    /* ! Customize text colors
+    ---------------------------------------------------------------------------- */
+
+        /*body                             {color: #222;}*/ /* Body */
+        /*#header-bottom-right .user       {color: #444;}*/ /* Header right IKP */
+        /*#header-bottom-right:hover .user {color: #111;}*/ /* Header right (hover) IKP */
+        /*.side .form-control              {color: #444;}*/ /* Sidebar search */
+        /*.titlebox .md h6      {color: #FFF !important;}*/ /* Sidebar custom heading */
+        /*.titlebox .bottom                {color: #555;}*/ /* Sidebar titlebox description bottom */
+        /*.spacer .title h1                {color: #444;}*/ /* Sidebar moderators headings */
+        /*.link .rank                      {color: #CCC;}*/ /* Link list link rank */
+        /*.tagline                         {color: #AAA;}*/ /* Link list link tag line */
+        /*.link .score                     {color: #999;}*/ /* Link list link score */
+        /*.link .score.likes               {color: #D64;}*/ /* Link list link score : upvote */
+        /*.link .score.dislikes            {color: #58D;}*/ /* Link list link score : downvote */
+        /*.footer:before                   {color: #777;}*/ /* Footer branding */
+        /*.footer                          {color: #777;}*/ /* Footer */
+        
+
+    /* ! Customize hyperlink colors
+    ---------------------------------------------------------------------------- */
+
+        /* Todo */
     
 
 
