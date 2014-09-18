@@ -1,943 +1,179 @@
 /*  ****************************************************************************
 
-    Planate v2.0 (2014-07-18)
+    Planate version 3 (2014-07-18)
     Theme for WhoaVerse < http://whoaverse.com >
     By Nurdoidz
     https://github.com/Nurdoidz/Planate-WhoaVerse
 
     **************************************************************************** */
 
+body {
+    background-color: #EEE;
+    color:            #333;
+    font-family:      Arial,sans-serif;
+    font-size:        10px;
+}
+
+.btn-whoaverse-paging {
+    background:    #F8F8F8;
+    background:    -webkit-linear-gradient( top,#FDFDFD,#F7F7F7 );
+    background:    -moz-linear-gradient( top,#FDFDFD,#F7F7F7 );
+    background:    -ms-linear-gradient( top,#FDFDFD,#F7F7F7 );
+    background:    -o-linear-gradient( top,#FDFDFD,#F7F7F7 );
+    border:        1px solid #DFDFDF;
+    border-radius: 3px;
+    box-shadow:    0 1px 0 hsla( 0,0%,0%,0.1 );
+    color:         #4C4C4C;
+    display:       inline-block;
+    font-size:     0.8em;
+    font-weight:   bold;
+    padding:       2px 6px;
+    text-align:    center;
+}
+.btn-whoaverse-paging:hover {
+    background:   #F8F8F8;
+    background:   -webkit-linear-gradient( top,#F8F8F8,#F2F2F2 );
+    background:   -moz-linear-gradient( top,#F8F8F8,#F2F2F2 );
+    background:   -ms-linear-gradient( top,#F8F8F8,#F2F2F2 );
+    background:   -o-linear-gradient( top,#F8F8F8,#F2F2F2 );
+    border-color: #CCC;
+    box-shadow:   0 1px 0 hsla( 0,0%,0%,0.15 );
+    color:        #444;
+}
 
 
-/* ! Body
-================================================================================ */
+#header {
+    background-color: #EEE;
+}
 
-    body {
-        background:  #EEE;
-        color:       #222;
-        font-family: Arial,sans-serif;
-        font-size:   10px;
+    #header-bottom-left {
+        background-color: #FFF;
+        box-shadow:       0 2px 0 hsla( 0,0%,0%,0.05 );
     }
 
-
-    a {color: #48E;}
-    a:hover {
-        color:           #59F;
-        text-decoration: underline;
-    }
-
-
-    .md blockquote {
-        background:         #FAFAFA;
-        border:             1px solid #EEE;
-        color:              inherit;
-        margin:             5px 15px 5px 0;
-        padding:            5px 10px 10px;
-        -webkit-box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
-        box-shadow:         2px 2px 0 rgba(0,0,0,0.1);
-        font-size:          inherit;
-    }
-
-
-    pre code {border: 0;}
-
-    code,pre {
-        background: #FAFAFA;
-        border:     1px solid #DDD;
-        color:      inherit;
-        font-size:  inherit;
-    }
-
-
-    #header-bottom-left,.side,.link,.commentarea,.menuarea,.well,
-    .titlebox .md h6 + blockquote {
-        -webkit-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
-        box-shadow:         0 3px 0 rgba(0,0,0,0.1);
-    }
-
-
-    .form-control {font-family: inherit;}
-    .form-control:focus {
-        -webkit-box-shadow: none;
-        box-shadow:         none;
-    }
-
-
-    /* ! Buttons
-    ---------------------------------------------------------------------------- */
-
-        .btn-default,.btn-whoaverse,.btn-whoaverse-default,.btn-whoaverse-medium,
-        .btn-whoaverse-paging,.titlebox h5 a,.sidecontentbox a.helplink {
-            border:                0;
-            -webkit-border-radius: 2px;
-            border-radius:         2px;
-            font-family:           "Segoe UI",Calibri,sans-serif;
-            font-size:             150%;
-            font-weight:           normal;
-            padding:               6px;
-            text-shadow:           none;
-            text-decoration:       none !important;
-            -webkit-box-shadow:    inset 0 -3px 0 rgba(0,0,0,0.2);
-            box-shadow:            inset 0 -3px 0 rgba(0,0,0,0.2);
-        }
-
-
-        .btn-default,.btn-whoaverse-default,.btn-whoaverse-medium,                                                                     
-        .pagination-container .btn-whoaverse-paging a,.side .btn-whoaverse,                                                                      
-        .btn-whoaverse-paging,.titlebox h5 a,.sidecontentbox a.helplink,                                                 
-        .btn-whoaverse-paging,.well .btn-whoaverse
-        {color: #FFF !important; background: #48E;}
-
-        .btn-default:hover,.btn-whoaverse-default:hover,                                           
-        .btn-whoaverse-medium:hover,                                                               
-        .pagination-container .btn-whoaverse-paging a:hover,                                       
-        .side .btn-whoaverse:hover,.titlebox h5 a:hover,
-        .sidecontentbox a.helplink:hover,.btn-whoaverse-paging:hover,
-        .well .btn-whoaverse:hover
-        {background: #59F;}
-
-
-    /* ! Voting arrows
-    ---------------------------------------------------------------------------- */
-
-        .arrow-downvote,.arrow-downvoted,.arrow-upvote,.arrow-upvoted {
-            background: url(http://i.imgur.com/BDutAqr.png);
-            height: 19px;
-            margin: auto;
-            width: 18px;
-        }
-
-        .arrow-downvote {background-position: 0;}
-        .arrow-downvoted {background-position: 0 -19px;}
-        .arrow-upvote {background-position: -18px 0;}
-        .arrow-upvoted {background-position: -18px -19px;}
-
-
-
-
-/* ! Header
-================================================================================ */
-
-    #header {
-        background: url(http://i.imgur.com/IVAIgeY.png) no-repeat fixed 50% 0 #48E;
-        height: 150px !important;
-    }
-
-
-    /* ! Header top
-    ---------------------------------------------------------------------------- */
-
-        #sr-header-area,#sr-more-link {
-            background: #222;
-            border:     1px solid #444;
-            font-size:  85%;
-            opacity:    0.5;
-        }
-        #sr-header-area:hover,#sr-header-area:hover #sr-more-link,
-        .whoaSubscriptionMenu ul:hover {opacity: 1;}
-
-
-        #sr-header-area,#sr-header-area a,#sr-more-link {color: #EEE;}
-        #sr-header-area a:hover,#sr-more-link {text-decoration: none;}
-        #sr-header-area a:hover,#sr-header-area .selected a {color: #6BA6FF;}
-
-
-        .whoaSubscriptionMenu li ul {border: 1px solid #666;}
-        .whoaSubscriptionMenu li ul li a:link,
-        .whoaSubscriptionMenu li ul li a:visited {
-            background: #222;
-            border:     1px solid #444;
-        }
-        .whoaSubscriptionMenu li ul li a:hover {background: #000;}
-        .whoaSubscriptionmenu ul {
-            position: absolute;
-            z-index:  99;
-        }
-
-
-    /* ! Header left
-    ---------------------------------------------------------------------------- */
-
-        #header-bottom-left {
-            background: #FFF;
-            border:     1px solid #F0F0F0;
-            height:     50px;
-            margin:     132px 0 10px;
-            padding:    5px 0 5px 10px;
-        }
-
-        #header-bottom-left a:hover {text-decoration: none;}
-
-
-        /* ! Header page name
-        ------------------------------------------------------------------------ */
-
-            .pagename {
-                font-size:      135%;
-                font-variant:   normal;
-                line-height:    40px;
-                text-transform: lowercase;
-            }
-
-            .pagename a {
-                color:       #555;
-                font-family: "Segoe UI",Calibri,sans-serif;
-                font-weight: normal;
-                margin-left: 12px;
-            }
-            .pagename a:hover {
-                color:           #48E;
-                text-decoration: none;
-            }
-
-
-        /* ! Header tab menu
-        ------------------------------------------------------------------------ */
-
-            .tabmenu {
-                border:      0;
-                font-family: "Segoe UI",Calibri,sans-serif;
-                line-height: 40px;
-                margin:      0;
-            }
-
-            .tabmenu li {
-                font-size:      135%;
-                font-weight:    normal;
-                margin:         0;
-                padding:        0 3px;
-                text-transform: lowercase;
-            }
-
-
-            /* ! Header tab menu unselected
-            -------------------------------------------------------------------- */
-
-                .tabmenu li a {
-                    background: none;
-                    border-top: 2px solid transparent;
-                    color:      #AAA;
-                    padding:    2px 5px;
-                }
-                .tabmenu li a:hover {
-                    color:           #777;
-                    border-color:    #AAA;
-                }
-
-
-            /* ! Header tab menu selected
-            -------------------------------------------------------------------- */
-
-                .tabmenu li.selected a {
-                    background: none;
-                    border:     0;
-                    color:      #555;
-                }
-                .tabmenu li.selected a:hover {color: #111;}
-
-
-    /* ! Header right
-    ---------------------------------------------------------------------------- */
-
-        #header-bottom-right {
-            background:    none;
-            border:        0;
-            border-radius: 0;
-            bottom:        -51px;
-            line-height:   50px;
-            padding:       0;
-            right:         10px;
-        }
-
-        #header-bottom-right a,
-        #header-bottom-right .user {color: #444;}
-        #header-bottom-right a:hover {color: #48E;}
-
-        #header-bottom-right:hover .user {color: #111;}
-
-
-
-/* ! Sidebar
-================================================================================ */
-
-    .side {
-        background: #FFF;
-        border:     1px solid #F0F0F0;
-        color:      inherit;
-        margin:     0 10px;
-        padding:    10px;
-        width:      300px;
-    }
-
-
-    /* ! Sidebar search
-    ---------------------------------------------------------------------------- */
-
-        .side .form-control {
-            border-radius:      0;
-            border-style:       solid none;
-            border-color:       #F0F0F0;
-            -webkit-box-shadow: none;
-            box-shadow:         none;
-            color:              #444;
-            font-family:        inherit;
-            margin:             0 -10px;
-            text-align:         center;
-            width:              107%;
-        }
-        .side .form-control:focus {border-color: #CCC;}
-        .side .form-control::-moz-placeholder {color: #444;}
-
-
-    /* ! Sidebar submission info
-    ---------------------------------------------------------------------------- */
-
-        .submissioninfo {border: 0;}
-
-
-        .titlebox.submissioninfo h2 {
-            color:          inherit;
-            font-weight:    bold;
-            font-family:    inherit;
-            font-size:      115%;
-            text-transform: none;
-        }
-
-
-        .submissioninfo .bottom {
-            border:  0;
-            margin:  0 !important;
-            padding: 0 !important;
-        }
-
-        .submissioninfo .h6 {color: #444;}
-
-
-    /* ! Sidebar titlebox
-    ---------------------------------------------------------------------------- */
-
-
-        /* ! Sidebar titlebox page name
-        ------------------------------------------------------------------------ */
-
-            .titlebox .whoaversename {
-                font-family:    "Segoe UI",Calibri,sans-serif;
-                font-size:      175%;
-                font-weight:    lighter;
-                margin:         10px 0;
-                text-transform: lowercase;
-            }
-            .titlebox .whoaversename a {color: #555;}
-            .titlebox .whoaversename a:hover {
-                color:           #48E;
-                text-decoration: none;
-            }
-
-
-        /* ! Sidebar titlebox subscribe
-        ------------------------------------------------------------------------ */
-
-            .titlebox .btn-whoaverse-paging {
-                font-size: 80%;
-                padding:   3px 6px;
-            }
-
-
-            .subscribers .word {visibility: hidden;}
-            .subscribers .word:before {
-                content: "planaters";
-                visibility: visible;
-            }
-
-            .users-online .word {visibility: hidden;}
-            .users-online .word:before {
-                content: "users online";
-                visibility: visible;
-            }
-
-
-        /* ! Sidebar titlebox description
-        ------------------------------------------------------------------------ */
-
-            .titlebox .md {
-                font-size: 110%;
-            }
-
-
-            .titlebox .md blockquote {font-size: inherit;}
-
-
-            .titlebox .md h6 {
-                background:  #48E;
-                color:       #FFF !important;
-                font-family: "Segoe UI",Calibri,sans-serif;
-                font-size:   110%;
-                margin:      15px 0 0;
-                padding:     5px 0;
-                text-align:  center;
-            }
-
-            .titlebox .md h6 + blockquote {
-                background:         none;
-                border:             1px solid #DDD;
-                margin:             0;
-                padding:            0 10px 10px;
-            }
-
-                .titlebox .md blockquote ul,.titlebox .md blockquote ol {
-                    margin-left:  20px;
-                    margin-right: 10px;
-                }
-
-
-            .titlebox .md h5 {font-size: 70%;}
-            .titlebox .md h5 a,.sidecontentbox a.helplink {
-                display:     block;
-                height:      30px;
-                line-height: 15px;
-                margin:      10px 0;
-                text-align:  center;
-                width:       100%;
-            }
-
-
-            .titlebox .bottom {
-                border-color: #DDD;
-                border-style: solid none none;
-                color:        #555;
-                margin:       10px 0 20px;
-                padding:      5px 0;
-            }
-
-
-        /* ! Sidebar moderators
-        ------------------------------------------------------------------------ */
-
-            .spacer .title h1 {
-                color:          #444;
-                text-transform: lowercase;
-                font-weight:    bold;
-            }
-
-
-            .sidecontentbox .content {border: 0;}
-            .icon-menu a {background: none;}
-
-            .sidecontentbox .content a {color: #666;}
-            .sidecontentbox .content a:hover {color: #48E;}
-
-
-
-/* ! Link list
-================================================================================ */
-
-    .content {margin: 60px 320px 0 10px;}
-
-    .sitetable {margin: -25px 0 0;}
-
-
-    /* ! Link list link
-    ---------------------------------------------------------------------------- */
-
-        .link {
-            background:          #FFF;
-            border:              1px solid #F0F0F0;
-            margin:              0 0 10px;
-            padding:             10px;
-        }
-
-        .link a {color: #48E;}
-        .link a:hover {color: #59F;}
-
-
-        /* ! Link list link rank
-        ------------------------------------------------------------------------ */
-
-            .link .rank {
-                color: #CCC;
-                font-family: inherit;
-                font-size: 180%;
-                margin: 17px 0 0;
-                text-align: center;
-            }
-
-
-        /* ! Link list link thumbnail
-        ------------------------------------------------------------------------ */
-
-            .thumbnail {background: none;}
-
-
-        /* ! Link list link title
-        ------------------------------------------------------------------------ */
-
-            .link .title {margin: 0 0 5px;}
-
-            .link .title.may-blank {
-                color:     #48E;
-                font-size: 105%;
-            }
-            .link .title.may-blank:hover {color: #59F;}
-
-
-            .domain {color: transparent;}
-
-            .domain a {
-                color:       #AAA;
-                font-weight: bold;
-            }
-            .domain a:hover {text-decoration: none;}
-
-
-        /* ! Link list link tag line
-        ------------------------------------------------------------------------ */
-
-            .tagline {
-                color:     #AAA;
-                font-size: 125%;
-                margin:    0 0 3px;
-            }
-
-            .link:hover .tagline {color: #555;}
-            .link .tagline .commentvotesratio {
-                color:       transparent;
-                font-weight: bold;
-                opacity:     0;
-            }
-            .link:hover .tagline .commentvotesratio {opacity: 1;}
-
-
-            .link .score {color: #999;}
-            .link .score.likes {color: #D64;}
-            .link .score.dislikes {color: #58D;}
-
-
-        /* ! Link list link flat list
-        ------------------------------------------------------------------------ */
-
-            .link .entry .flat-list {
-                font-size: 120%;
-                padding: 0;
-            }
-
-
-            .link .entry .flat-list.buttons li a {opacity: 0;}
-            .link:hover .entry .flat-list.buttons li a {opacity: 1;}
-
-            .link .entry .flat-list.buttons li .comments {
-                color:   #48E;
-                opacity: 1 !important;
-            }
-            .link .entry .flat-list.buttons li .comments:hover {color: #59F;}
-
-
-        /* ! Link list link expando
-        ------------------------------------------------------------------------ */
-
-            .expando-button {
-                height: 12px;
-                width:  12px;
-            }
-
-            /* Expanded buttons commented for the future. */
-
-            .expando-button.selftext.collapsed,
-            .expando-button.selftext.collapsed:hover
-            /*.expando-button.selftext.expanded,
-            .expando-button.selftext.expanded:hover*/ {
-                background: url(http://i.imgur.com/56QAkuI.png);
-                height:     12px;
-                width:      12px;
-            }
-
-            .expando-button.selftext.collapsed {background-position: -36px 0;}
-            .expando-button.selftext.collapsed:hover {background-position: -36px -12px;}
-            /*.expando-button.selftext.expanded {background-position: -62px 0;}
-            .expando-button.selftext.expanded:hover {background-position: -62px -26px;}*/
-
-
-
-/* ! Link page
-================================================================================ */
-
-    .link .usertext .md {
-        background:            #FAFAFA;
-        -webkit-border-radius: 0;
-        border-radius:         0;
-        border:                1px solid #DDD;
-        font-size:             110%;
-    }
-
-
-    .usertext .md h1,.usertext .md h2,.usertext .md h3,.usertext .md h4,
-    .usertext .md h5,.usertext .md h6 {color: inherit;}
-
-
-    /* ! Link page markup
-    ---------------------------------------------------------------------------- */
-
-        .md {line-height: 150%;}
-
-        .md h1 {
-            font-size:     140%;
-            border-bottom: 1px dotted #AAA;
-        }
-
-        .md h2 {
-            font-size:   120%;
-            font-weight: bold;
-            margin:      5px 0 !important;
-        }
-
-        .md h3,.md h4 {
-            font-size:  115%;
-            font-style: italic;
-        }
-
-        .md p {margin: 5px 0;}
-
-
-        .md table {
-            border:             2px solid #CCC;
-            -webkit-box-shadow: none;
-            box-shadow:         none;
-        }
-
-        .md td,.md th {border: 2px solid #CCC;}
-
-
-    /* ! Link page reply form
-    ---------------------------------------------------------------------------- */
-
-        .content hr {
-            margin: 5px 0;
-        }
-
-
-        .commenttextarea,.well .form-control {
-            background:            #FFF;
-            -webkit-border-radius: 0;
-            border-radius:         0;
-            color:                 inherit;
-            border-color:          #CCC;
-        }
-        .commenttextarea:focus,.well .form-control:focus {border-color: #AAA;}
-
-
-    /* ! Link page comments
-    ---------------------------------------------------------------------------- */
-
-        .menuarea {
-            background:    #FFF;
-            border:        1px solid #F0F0F0;
-            border-bottom: 0;
-            margin:        0;
-            padding:       10px;
-        }
-
-
-        .commentarea {
-            background: #FFF;
-            border:     1px solid #F0F0F0;
-            border-top: 0;
-            padding:    10px;
-        }
-
-
-        .commentarea .thread.comment {
-            margin:  0 !important;
-            padding: 10px !important;
-        }
-
-        .commentarea .child.comment {
-            background: #FCFCFC;
-            border:     1px solid #DDD;
-            margin:     5px 0 5px 27px !important;
-        }
-
-
-        .commentarea .entry {margin: 0;}
-
-
-        .commentarea .entry .buttons li a {color: #777;}
-
-
-        .commentarea h2 {margin-bottom: 10px;}
-
-
-        .comment .tagline {font-size: 120%;}
-        .comment .score {font-size: inherit;}
-        .tagline .moderator {color: #22AA20;}
-        .tagline .submitter {color: #3A6FBD;}
-
-        .comment .expand {color: #777;}
-        .comment .expand:hover {color: #48E;}
-
-
-        .commentarea .md {font-size: 110%;}
-
-
-        .comment .btn-whoaverse-paging,.link .btn-whoaverse-paging {font-size:  100%;}
-
-
-
-/* ! Submission page
-================================================================================ */
-
-    .well {
-        background:            #FFF;
-        border:                1px solid #F0F0F0;
-        -webkit-border-radius: 0;
-        border-radius:         0;
-        padding:               10px;
-    }
-
-
-    .well .alert {
-        background:    none;
-        border-bottom: 1px dotted #AAA;
-        color:         inherit;
-        font-size:     175%;
-        font-weight:   bold;
-        padding:       0 10px 10px;
-        margin:        10px 0;
-    }
-
-    .well hr {display: none;}
-
-
-    .well label {
-        font-size: 125%;
-        margin:    5px 0 !important;
-    }
-
-
-        /* Formatting help */
-        .panel {
-            border: 0;
-            box-shadow: none;
-        }
-
-            /* Title */
-            .panel-default > .panel-heading {
-                background: none;
-                border-bottom: 1px dotted #AAA;
-                color: inherit;
-                padding: 10px;
-            }
-
-            .panel-title {
-                font-size: 175%;
-                font-weight: bold;
-            }
-            .panel-title a:hover {text-decoration: none;}
-
-
-            /* Table */
-            .panel-default > .panel-heading + .panel-collapse > .panel-body {
-                border: 0;
-            }
-
-            .panel-body {
-                font-size: 130%;
-            }
-
-            .table > thead > tr.info > th {background: none;}
-            .table-striped > tbody > tr:nth-child(2n+1) > td {
-                background: none;
-                border: 0;
-            }
-            .table > thead > tr > th, .table > tbody > tr > td {
-                border: 0;
-            }
-            .table-hover > tbody > tr:hover > td {
-                background: none;
-            }
-            tr.info {
-                border-bottom: 1px dotted #AAA;
-            }
-
-
-
-/* ! Footer
-================================================================================ */
-
-    .footer:before {
-        color:     #777;
-        content:   "Subverse theme /v/Planate"; /* Please do not remove! */
-        display:   block;
-        font-size: 150%;
-        margin:    10px;
-    }
-
-
-    .footer {
-        border: 0;
-        color: #777;
-    }
-
-
-
-
-/*  ! Transitions
-================================================================================ */
-
-    /* ! Transitions opacity
-    ---------------------------------------------------------------------------- */
-    
-        .tagline .commentvotesratio,
-        .link:hover .entry li a,
-        #header-bottom-right,
-        #sr-header-area {
-            -webkit-transition: opacity 0.25s ease;
-            -moz-transition:    opacity 0.25s ease;
-            -o-transition:      opacity 0.25s ease;
-            transition:         opacity 0.25s ease;
-        }
-    
-    
-    /* ! Transitions color
-    ---------------------------------------------------------------------------- */
-
-        /* Text */
-        .tabmenu li a,
-        .tabmenu li.selected a,
-        .pagename a,
-        #header-bottom-right:hover .user,
-        .titlebox h1 a,
-        .tagline {
-            -webkit-transition: color 0.25s ease;
-            -moz-transition:    color 0.25s ease;
-            -o-transition:      color 0.25s ease;
-            transition:         color 0.25s ease;
-        }
-        
-        /* Border */
         .tabmenu li a {
-            -webkit-transition: border-color 0.25s ease;
-            -moz-transition:    border-color 0.25s ease;
-            -o-transition:      border-color 0.25s ease;
-            transition:         border-color 0.25s ease;
+            margin-left:   9px;
+            margin-right:  9px;
+            padding-left:  4px;
+            padding-right: 4px;
+            transition:    color 0.25s ease;
         }
 
+        .tabmenu li.disabled a {
+            background-color: none;
+            border:           0;
+            border-top:       2px solid transparent;
+            border-radius:    0;
+            box-shadow:       none;
+            color:            #AAA;
+        }
+        .tabmenu li.disabled a:hover {
+            background-color: none;
+            color:            #777;
+            border:           0;
+            border-top:       2px solid #AAA;
+            box-shadow:       none;
+        }
 
+        .tabmenu li.selected a {
+            background-color: none;
+            border:           0;
+            border-radius:    0;
+            box-shadow:       none;
+            color:            #555;
+        }
+        .tabmenu li.selected a:hover {
+            box-shadow: none;
+            color:      #111;
+        }
 
-/* ! Customization
-================================================================================ */
+.side {
+    background-color: #FFF;
+    border:           1px solid #E3E3E3;
+    border-radius:    2px;
+    box-shadow:       0 2px 0 hsla( 0,0%,0%,0.05 );
+}
 
-    /* ! Customize backgrounds
-    ---------------------------------------------------------------------------- */
-
-        /*body                           {background: #EEE;}*/ /* Body */
-        /*.md blockquote              {background: #FAFAFA;}*/ /* Block quote */
-        /*code,pre                    {background: #FAFAFA;}*/ /* Code block */
-        /*#header-bottom-left            {background: #FFF;}*/ /* Header left */
-        /*.side                          {background: #FFF;}*/ /* Sidebar */
-        /*.titlebox .md h6               {background: #48E;}*/ /* Sidebar custom heading */
-        /*.link                          {background: #FFF;}*/ /* Link list link */
-        /*.link .usertext .md         {background: #FAFAFA;}*/ /* Link page user text */
-        /*.commenttextarea               {background: #FFF;}*/ /* Link page reply form */
-        /*.menuarea                      {background: #FFF;}*/ /* Link page comments 'sort by' */
-        /*.commentarea                   {background: #FFF;}*/ /* Link page comments area */
-        /*.commentarea .child.comment {background: #FCFCFC;}*/ /* Link page child comments */
-        /*.well                          {background: #FFF;}*/ /* Submission page */
-        /*.well .form-control            {background: #FFF;}*/ /* Submission page forms */
-        
-
-    /* ! Customize border colors
-    ---------------------------------------------------------------------------- */
-
-        /*.md blockquote                  {border-color: #EEE;}*/ /* Block quote */
-        /*code,pre                        {border-color: #DDD;}*/ /* Code block */
-        /*#header-bottom-left          {border-color: #F0F0F0;}*/ /* Header left */
-        /*.tabmenu li a:hover             {border-color: #AAA;}*/ /* Header tab menu unselected (hover) */
-        /*.side                        {border-color: #F0F0F0;}*/ /* Sidebar */
-        /*.side .form-control          {border-color: #F0F0F0;}*/ /* Sidebar search */
-        /*.side .form-control:focus       {border-color: #CCC;}*/ /* Sidebar search (focus) */
-        /*.titlebox .md h6 + blockquote   {border-color: #DDD;}*/ /* Sidebar custom heading box */
-        /*.titlebox .bottom               {border-color: #DDD;}*/ /* Sidebar titlebox description bottom */
-        /*.link                        {border-color: #F0F0F0;}*/ /* Link list link */
-        /*.link .usertext .md             {border-color: #DDD;}*/ /* Link page user text */
-        /*.md h1                          {border-color: #AAA;}*/ /* Link page markup : heading 1 */
-        /*.md table                       {border-color: #CCC;}*/ /* Link page markup : table */
-        /*.md td,.md th                   {border-color: #CCC;}*/ /* Link page markup : table cells */
-        /*.commenttextarea                {border-color: #CCC;}*/ /* Link page reply form */
-        /*.commenttextarea:focus          {border-color: #AAA;}*/ /* Link page reply form (focus) */
-        /*.menuarea                    {border-color: #F0F0F0;}*/ /* Link page comments 'sort by' */
-        /*.commentarea                 {border-color: #F0F0F0;}*/ /* Link page comments area */
-        /*.commentarea .child.comment  {border-color: #FCFCFC;}*/ /* Link page child comments */
-        /*.well                        {border-color: #F0F0F0;}*/ /* Submission page */
-        /*.well .alert                    {border-color: #AAA;}*/ /* Submission page alert */
-        /*.panel-default > .panel-heading {border-color: #AAA;}*/ /* Submission page panel heading */
-        /*tr.info                         {border-color: #AAA;}*/ /* Submission page panel table header */
-        /*.well .form-control             {border-color: #CCC;}*/ /* Submission page forms */
-        /*.well .form-control:focus       {border-color: #AAA;}*/ /* Submission page forms (focus) */
-
-
-    /* ! Customize text colors
-    ---------------------------------------------------------------------------- */
-
-        /*body                             {color: #222;}*/ /* Body */
-        /*#header-bottom-right .user       {color: #444;}*/ /* Header right IKP */
-        /*#header-bottom-right:hover .user {color: #111;}*/ /* Header right (hover) IKP */
-        /*.side .form-control              {color: #444;}*/ /* Sidebar search */
-        /*.titlebox .md h6      {color: #FFF !important;}*/ /* Sidebar custom heading */
-        /*.titlebox .bottom                {color: #555;}*/ /* Sidebar titlebox description bottom */
-        /*.spacer .title h1                {color: #444;}*/ /* Sidebar moderators headings */
-        /*.link .rank                      {color: #CCC;}*/ /* Link list link rank */
-        /*.tagline                         {color: #AAA;}*/ /* Link list link tag line */
-        /*.link .score                     {color: #999;}*/ /* Link list link score */
-        /*.link .score.likes               {color: #D64;}*/ /* Link list link score : upvote */
-        /*.link .score.dislikes            {color: #58D;}*/ /* Link list link score : downvote */
-        /*.footer:before                   {color: #777;}*/ /* Footer branding */
-        /*.footer                          {color: #777;}*/ /* Footer */
-        
-
-    /* ! Customize hyperlink colors
-    ---------------------------------------------------------------------------- */
-
-        /* Todo */
+.sitetable.linklisting {
+    background-color: #FFF;
+    border:           1px solid #E3E3E3;
+    border-radius:    2px;
+    box-shadow:       0 2px 0 hsla( 0,0%,0%,0.05 );
+    padding:          0 13px;
+}
     
-
-
-/* ! Mobile
-================================================================================ */
-
-    @media (max-width: 850px) {
-        #header .pagename {display: none;}
+    .link {
+        border-bottom:  1px solid #E3E3E3;
+        margin-bottom:  0;
+        margin-top:     0;
+        padding-bottom: 12px;
+        padding-top:    12px;
     }
 
-    @media (max-width: 800px) {
-        .flat-list.buttons {font-size: 130%;}
+        .link .rank {
+            color:      #CCC;
+            font-size:  1em;
+            margin-top: 20px;
+        }
 
-        /* Sidebar ------------------------------------------------------------- */
-        .side {display: none;}
+        .link .title {
+            font-size:     1.20em;
+            line-height:   1.4;
+            margin-bottom: 3px;
+        }
 
-        /* Post feed ----------------------------------------------------------- */
-        .content {margin-right: 10px;}
+            .link .title a.may-blank {
+                color: #3C8FC2;
+            }
+            .link .title a.may-blank:hover {
+                color:           #3C8FC2;
+                text-decoration: underline;
+            }
+            .link .title a.may-blank:visited {
+                color: #555;
+            }
 
-        /* Transitions --------------------------------------------------------- */
-        #sr-header-area,
-        #sr-more-link,
-        #header-bottom-right,
-        .link .tagline .commentvotesratio,
-        .link .entry .flat-list.buttons li a {opacity: 1 !important;}
-    }
+        .link .usertext .md {
+            border-radius: 2px;
+            box-shadow:    none;
+        }
 
-    @media (max-width: 730px) {
-        .tabmenu li {font-size: 110%;}
-    }
+.content > form {
+    background-color: #FFF;
+    border:           1px solid #E3E3E3;
+    box-shadow:       0 2px 0 hsla( 0,0%,0%,0.05 );
+    margin-top:       10px;
+    padding:          13px;
+}
 
-    @media (max-width: 660px) {
-        #header-img {display: none;}
-    }
+.menuarea {
+    background-color: #FFF;
+    border:           1px solid #E3E3E3;
+    border-bottom:    0;
+    margin:           0;
+    padding:          13px 13px 0;
+}
 
-    @media (max-width: 540px) {
-        .tabmenu li a {padding: 2px 0;}
-    }
+.commentarea {
+    background-color: #FFF;
+    border:           1px solid #E3E3E3;
+    border-top:       0;
+    border-radius:    2px;
+    box-shadow:       0 2px 0 hsla( 0,0%,0%,0.05 );
+    padding:          13px;
+}
 
-    @media (max-width: 500px) {
-        #header-bottom-right {display: none;}
-    }
+.well {
+    background-color: #FFF;
+    border:           1px solid #E3E3E3;
+    border-radius:    2px;
+    box-shadow:       0 2px 0 hsla( 0,0%,0%,0.05 );
+}
 
-
+.footer:before {
+    color:     #777;
+    content:   "Subverse theme /v/Planate"; /* Please do not remove! */
+    display:   block;
+    font-size: 1.5em;
+    margin:    10px;
+}
